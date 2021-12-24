@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+const CLASSIFICATION = ['kingdom', 'phylum','class', 'order','family','genus','species'];
+
+function buildTreeData(plantData, taxoData) {
+  // only doing plants (for now), so hard code the kingdom
+  const tree = { name: 'Plantae', children: [] };
+  for (const pd of plantData) {
+    let current = tree;
+    const taxo = taxoData[pd.binomialName];
+    if (!taxo) {
+      console.log(`Couldnt find taxonomy data for ${pd.binomialName}`);
+      continue;
+    }
+    for (const step of CLASSIFICATION) {
+      const groupName = taxo[step];
+      const last = step === 'species' ? {
+        ...pd,
+        name: pd.binomialName
+      } : null;
+      current = checkStepInTree(current, groupName, last);
+    }
+  }
+  return tree;
+}
+
+function checkStepInTree(current, groupName, last) {
+  if (Array.isArray(current)) {
+    return processArrayInTreeData(current, groupName, last);
+  }
+  return processObjectInTree(current, groupName);
+}
+
+function processObjectInTree(current, groupName) {
+  if (current.name === groupName) {
+    return current.children;
+  }
+
+  return null;
+}
+
+function processArrayInTreeData(current, groupName, last) {
+  for (const child of current) {
+    const found = processObjectInTree(child, groupName);
+    if (found) {
+      return found;
+    }
+  }
+
+  // if we didnt find a child, create one
+  const newChild = last ? {
+    ...last
+  } : {
+    name: groupName,
+    children: []
+  };
+  current.push(newChild);
+  return newChild.children;
+}
+
+(async function() {
+  const { plants } = await import('../src/data/plants.mjs');
+  const { taxonomy } = await import('../src/data/taxonomy.mjs');
+
+  const path = require('path');
+  const fs = require('fs');
+
+  const ROOT = path.resolve(__dirname, '..');
+  const OUTFILE = path.join(ROOT, 'src','data', 'treeData.mjs');
+
+  const tree = buildTreeData(plants, taxonomy);
+  const data = `export const treeData = ${JSON.stringify(tree)}`;
+  fs.writeFileSync(OUTFILE, data, 'utf8');
+})();

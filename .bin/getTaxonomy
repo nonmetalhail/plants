@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+
+function pause() {
+  return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve();
+		}, 5);
+	});
+}
+
+(async function() {
+  const { plants } = await import('../src/data/plants.mjs');
+  const { taxonomy } = await import('../src/data/taxonomy.mjs');
+
+  const path = require('path');
+  const fs = require('fs');
+  const axios = require('axios');
+
+  const URL = 'https://api.gbif.org/v1/species/match?verbose=true&genus=';
+  const ROOT = path.resolve(__dirname, '..');
+  const OUTFILE = path.join(ROOT, 'src', 'data', 'taxonomy.mjs');
+
+  const args = process.argv.slice(2);
+  const taxo = args.indexOf('-f') > -1 ? {} : {...taxonomy};
+  for (const plant of plants) {
+    if (taxo[plant]) continue;
+    try {
+      console.log(`Getting ${plant.binomialName}`);
+      const response = await axios.get(encodeURI(`${URL}${plant.binomialName}`));
+      if (response.data.matchType !== "EXACT") {
+        console.log('***************************************');
+        console.log(`Submitted: ${plant.binomialName}`);
+        console.log(response.data);
+      }
+
+      if (response.data.matchType === "EXACT" || args.indexOf('-a') > -1) {
+        taxo[plant.binomialName] = response.data;
+      }
+
+    } catch (error) {
+      console.error(error);
+    }
+    await pause();
+  }
+  const data = `export const taxonomy = ${JSON.stringify(taxo)}`;
+  fs.writeFileSync(OUTFILE, data, 'utf8');
+
+
+})();

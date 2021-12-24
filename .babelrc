@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "last 1 Chrome versions",
+            "last 1 Firefox versions",
+            "last 1 Edge versions",
+            "Safari >= 15"
+          ]
+        },
+        "modules": false
+      }
+    ]
+  ]
+}

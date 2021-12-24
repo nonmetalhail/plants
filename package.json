@@ -1,0 +1,38 @@
+{
+	"name": "plants",
+	"version": "0.0.1",
+	"description": "A visualization of plants",
+	"main": "index.js",
+	"scripts": {
+		"build:d3": "rollup -c rollup.config.js",
+    "build:data": "npm run taxonomy:update && npm run treedata",
+		"ic": "git clean -xfd && npm i",
+		"lint": "eslint \"**/*.js\" --fix",
+		"start": "python -m SimpleHTTPServer 8888",
+		"taxonomy:update": ".bin/getTaxonomy",
+		"taxonomy:overwrite": ".bin/getTaxonomy -f",
+		"treedata": ".bin/buildTreeData"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"engines": {
+		"node": "16.13.1",
+		"npm": "8.1.2"
+	},
+	"author": "Elliot Nahman",
+	"devDependencies": {
+		"@babel/eslint-parser": "^7.16.5",
+		"@babel/preset-env": "^7.16.5",
+		"axios": "^0.24.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^6.0.0",
+		"rollup": "^2.62.0",
+		"rollup-plugin-ascii": "^0.0.3",
+		"rollup-plugin-node-resolve": "^5.2.0"
+	},
+	"dependencies": {
+		"d3": "^7.2.1"
+	}
+}
