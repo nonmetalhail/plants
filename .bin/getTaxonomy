@@ -23,7 +23,7 @@ function pause() {
   const args = process.argv.slice(2);
   const taxo = args.indexOf('-f') > -1 ? {} : {...taxonomy};
   for (const plant of plants) {
-    if (taxo[plant]) continue;
+    if (taxo[plant.binomialName]) continue;
     try {
       console.log(`Getting ${plant.binomialName}`);
       const response = await axios.get(encodeURI(`${URL}${plant.binomialName}`));

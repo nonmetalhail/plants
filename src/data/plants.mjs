@@ -109,18 +109,158 @@ export const plants = [
     binomialName: 'Cereus forbesii cv. Spiralis',
     commonNames: ['Spiral cactus']
   }, {
-    binomialName: 'Cereus repandus monstrose',
-    commonNames: ['Peruvian apple cactus'],
-    links: ['https://en.wikipedia.org/wiki/Espostoa_lanata']
-  }, {
     binomialName: 'Cereus repandus',
     commonNames: ['Spineless apple cactus'],
     synonyms: ['Cereus peruvianus'],
     confidence: 2,
     links: ['https://en.wikipedia.org/wiki/Espostoa_lanata']
   }, {
+    binomialName: 'Cereus repandus var. monstrose',
+    commonNames: ['Peruvian apple cactus'],
+    links: ['https://en.wikipedia.org/wiki/Espostoa_lanata']
+  }, {
+    binomialName: 'Cereus repandus f. monstrose "Rojo"',
+    links: [
+      'https://cactusjungle.com/plants/cereus-monstrose-rojo/',
+      'https://thebelmontrooster.com/families-of-familiar-plants/cactaceae-family/cereus-repandus-monstruosus-cv-rojo-syn-cereus-peruvianus-monstrose-cv-rojo/'
+    ]
+  }, {
     binomialName: 'Cereus validus fa. monstrose "Ming Thing"',
     links: ['https://cactusjungle.com/plants/cereus-monstrose-ming-thing/']
+  }, {
+    binomialName: 'Pachycereus pringlei',
+    commonNames: ['Cardon', 'Mexican giant cardon'],
+    links: ['https://en.wikipedia.org/wiki/Pachycereus_pringlei']
+  }, {
+    binomialName: 'Austrocylindropuntia subulata',
+    commonNames: ["Eve's needles"],
+    links: [
+      'https://en.wikipedia.org/wiki/Austrocylindropuntia_subulata',
+      'https://cactusjungle.com/plants/austrocylindropuntia-subulata/'
+    ]
+  }, {
+    binomialName: 'Opuntia monacantha v. Maverick variegata',
+    commonNames: ["Joseph's coat"],
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/19873/Opuntia_monacantha_var._variegata_cv._Maverick_variegata']
+  }, {
+    binomialName: 'Echinocactus grusonii',
+    commonNames: ['Golden Barrel (cluster)'],
+    links: ['https://en.wikipedia.org/wiki/Echinocactus_grusonii']
+  }, {
+    binomialName: 'Echniocereus v rubispinus'
+  }, {
+    binomialName: 'Echinocereus engelmannii',
+    commonNames: ["Engelmann's Hedgehog"],
+    links: ['https://www.birdandhike.com/Veg/Species/Cactus/Echino_eng/_Ech_eng.htm']
+  }, {
+    binomialName: 'Ferocactus peninsulae',
+    confidence: 2,
+    links: [
+      'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/11990/Ferocactus_peninsulae_subs._townsendianus',
+      'https://cactiguide.com/cactus/?genus=Ferocactus&species=peninsulae'
+    ]
+  }, {
+    binomialName: 'Pilosocereus pachycladus',
+    confidence: 2,
+    commonNames: ['Bright wooley blue spire'],
+    links: [
+      'https://cactusjungle.com/plants/pilosocereus-pachycladus/',
+      'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/16443/Pilosocereus_pachycladus'
+    ]
+  }, {
+    binomialName: 'Pilosocereus azureus',
+    confidence: 2,
+    commonNames: ['Wooley blue spires'],
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/16452/Pilosocereus_azureus']
+  }, {
+    binomialName: 'Cleistocactus winteri',
+    commonNames: ['Golden Rat Tail'],
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/3784/Cleistocactus_winteri']
+  }, {
+    binomialName: 'Oreocereus trollii',
+    commonNames: ['Old man of the Andes']
+  }, {
+    binomialName: 'Cephalocereus senilis',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/6893/Cephalocereus_senilis']
+  }, {
+    binomialName: 'Euphorbia milii',
+    links: ['https://en.wikipedia.org/wiki/Euphorbia_milii']
+  }, {
+    binomialName: 'Euphorbia leuconeura',
+    commonNames: ['Madagascar jewel'],
+    links: [
+      'https://en.wikipedia.org/wiki/Euphorbia_leuconeura',
+      'https://laidbackgardener-blog.cdn.ampproject.org/v/s/laidbackgardener.blog/2020/01/17/madagascar-jewel-the-pass-along-succulent/'
+    ]
+  }, {
+    binomialName: 'Euphorbia ammak',
+    commonNames: ['African candelabra']
+  }, {
+    binomialName: 'Euphorbia tirucalli',
+    commonNames: ['Pencil cactus'],
+    links: ['https://en.wikipedia.org/wiki/Euphorbia_tirucalli']
+  }, {
+    binomialName: 'Euphorbia pachypodioides'
+  }, {
+    binomialName: 'Euphorbia aeruginosa'
+  }, {
+    binomialName: 'Euphorbia mammillaris f. variegata',
+    commonNames: ['Corn cobb cactus']
+  }, {
+    binomialName: 'Euphorbia polygona',
+    commonNames: ['African milk barrel']
+  }, {
+    binomialName: 'Euphorbia enopla',
+    confidence: 3
+  }, {
+    binomialName: 'Euphorbia horrida var noorsveldensis',
+    commonNames: ['Spiny milk barrel']
+  }, {
+    binomialName: 'Euphorbia trigona f. rubra',
+    commonNames: ['African Milk Tree']
+  }, {
+    binomialName: 'Euphorbia flanaganii'
+  }, {
+    binomialName: 'Euphorbia neriifolia'
+  }, {
+    binomialName: 'Euphorbia resinifera',
+    confidence: 2,
+    commonNames: ['Moroccan mound']
+  }, {
+    binomialName: 'Euphorbia grandialata',
+    links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Euphorbiaceae/18792/Euphorbia_grandialata']
+  }, {
+    binomialName: 'Euphorbia grandicornis',
+    links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Euphorbiaceae/18789/Euphorbia_grandicornis']
+  }, {
+    binomialName: 'Euphorbia greenwayi',
+    links: ['http://www.llifle.net/Encyclopedia/SUCCULENTS/Family/Euphorbiaceae/35284/Euphorbia_greenwayi']
+  }, {
+    binomialName: 'Euphorbia meloformis',
+    links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Euphorbiaceae/11997/Euphorbia_meloformis']
+  }, {
+    binomialName: 'Cyphostemma juttae',
+    commonNames: ['Namibian wild grape'],
+    links: ['https://en.wikipedia.org/wiki/Cyphostemma_juttae']
+  }, {
+    binomialName: 'Agave attenuata',
+    commonNames: ['Foxtail Agave'],
+    links: ['https://en.wikipedia.org/wiki/Agave_attenuata']
+  }, {
+    binomialName: 'A. ocahui x A. attenuata',
+    commonNames: ['Agave Blue Glow']
+  }, {
+    binomialName: 'Agave filifera',
+    commonNames: ['Thread-leaf agave'],
+    confidence: 2
+  }, {
+    binomialName: 'Agave tequilana',
+    commonNames: ['Blue agave'],
+    links: ['https://en.wikipedia.org/wiki/Blue_agave']
+  }, {
+    binomialName: "Agave americana v. 'Marginata'",
+    links: ['https://en.wikipedia.org/wiki/Agave_americana']
+  }, {
+    binomialName: 'Agave parryi'
   }
 ];
-

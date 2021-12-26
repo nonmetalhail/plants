@@ -15,7 +15,7 @@ function buildTreeData(plantData, taxoData) {
       const groupName = taxo[step];
       const last = step === 'species' ? {
         ...pd,
-        name: pd.binomialName
+        name: stripGenus(pd.binomialName)
       } : null;
       current = checkStepInTree(current, groupName, last);
     }
@@ -55,6 +55,13 @@ function processArrayInTreeData(current, groupName, last) {
   };
   current.push(newChild);
   return newChild.children;
+}
+
+function stripGenus(name) {
+  const arr = name.split(' ');
+  const genus = arr[0][0];
+  const species = arr.slice(1).join(' ');
+  return `${genus}. ${species}`;
 }
 
 (async function() {
