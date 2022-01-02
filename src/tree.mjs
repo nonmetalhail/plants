@@ -6,7 +6,6 @@ import {
   stratify
 } from './d3_bundle/dist/pd3.js';
 
-
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/tree

@@ -183,6 +183,8 @@ export const plants = [
     binomialName: 'Cephalocereus senilis',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/6893/Cephalocereus_senilis']
   }, {
+    binomialName: 'Tephrocactus papyracanthus'
+  }, {
     binomialName: 'Euphorbia milii',
     links: ['https://en.wikipedia.org/wiki/Euphorbia_milii']
   }, {
@@ -262,5 +264,216 @@ export const plants = [
     links: ['https://en.wikipedia.org/wiki/Agave_americana']
   }, {
     binomialName: 'Agave parryi'
+  }, {
+    binomialName: 'Aloe marlothii',
+    commonNames: ['Mountain aloe'],
+    links: [
+      'https://en.wikipedia.org/wiki/Aloe_marlothii',
+      'https://cactusjungle.com/plants/aloe-marlothii-bergaalwyn-mountain-aloe/'
+    ]
+  }, {
+    binomialName: 'Aloe nobilis',
+    commonNames: ['Gold-Tooth Aloe']
+  }, {
+    binomialName: 'Aloe arborescens',
+    commonNames: ['Torch Aloe']
+  }, {
+    binomialName: 'Aloe ciliaris',
+    confidence: 2
+  }, {
+    binomialName: "Aloe California",
+    confidence: 3
+  }, {
+    binomialName: 'Gonialoe variegata',
+    commonNames: ['Tiger aloe']
+  }, {
+    binomialName: 'Senecio articulatus',
+    commonNames: ['Candle Plant']
+  }, {
+    binomialName: 'Crassula ovata',
+    commonNames: ['Jade plant'],
+    links: ['https://en.wikipedia.org/wiki/Crassula_ovata']
+  }, {
+    binomialName: "Crassula ovata v. 'Monstruosa'",
+    commonNames: ['Gollum jade', 'Ogre ear'],
+    links: ['https://en.wikipedia.org/wiki/Crassula_ovata']
+  }, {
+    binomialName: 'Adromischus maculatus',
+    links: [
+      'https://en.wikipedia.org/wiki/Adromischus_maculatus',
+      'http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/25598/Adromischus_maculatus'
+    ]
+  }, {
+    binomialName: 'Adromischus filicaulis',
+    links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/27682/Adromischus_filicaulis']
+  }, {
+    binomialName: 'Curio rowleyanus',
+    commonNames: ['String of Pearls'],
+    links: ['https://en.wikipedia.org/wiki/Curio_rowleyanus']
+  }, {
+    binomialName: 'Sedum rubrotinctum'
+  }, {
+    binomialName: 'Curio repens',
+    commonNames: ['Blue chalksticks'],
+    synonyms: ['Senecio mandraliscae'],
+    links: ['https://www.gardenia.net/plant/senecio-mandraliscae-blue-chalk-stick']
+  }, {
+    binomialName: "Echeveria 'purple pearl'"
+  }, {
+    binomialName: "Gasteria cv. 'little warty'"
+  }, {
+    binomialName: 'Oscularia deltoides'
+  }, {
+    binomialName: 'Deuterocohnia brevifolia',
+    links: [
+      'https://en.wikipedia.org/wiki/Deuterocohnia_brevifolia',
+      'https://worldofsucculents.com/deuterocohnia-brevifolia/'
+    ]
+  }, {
+    binomialName: 'Aeonium undulatum',
+    confidence: 2
+  }, {
+    binomialName: 'Aeonium arboreum var. atropurpureum',
+    links: ['https://botanicgardens.uw.edu/about/blog/2014/08/04/august-2014-plant-profile-aeonium-arboreum-var-atropurpureum/']
+  }, {
+    binomialName: 'Echeveria agavoides',
+    commonNames: ['Lipstick echeveria'],
+    links: ['https://www.succulentsandsunshine.com/types-of-succulents/echeveria-agavoides-lipstick-echeveria/']
+  }, {
+    binomialName: 'Kalanchoe delagoensis',
+    commonNames: ['Mother of Millions']
+  }, {
+    binomialName: 'Kalanchoe beharensis',
+    links: ['https://en.wikipedia.org/wiki/Kalanchoe_beharensis']
+  }, {
+    binomialName: 'Crassula tetragona'
+  }, {
+    binomialName: 'Haworthia fasciata',
+    commonNames: ['Zebra plant']
+  }, {
+    binomialName: 'Kalanchoe fedtschenkoi',
+    links: ['https://www.crassulaceae.ch/de/artikel?akID=68&aaID=2&aiID=F&aID=270']
+  }, {
+    binomialName: 'Sedum morganianum',
+    links: ['https://en.wikipedia.org/wiki/Sedum_morganianum']
+  }, {
+    binomialName: 'Corpuscularia lehmannii',
+    links: ['https://www.succulentsandsunshine.com/types-of-succulents/corpuscularia-lehmannii-ice-plant/']
+  }, {
+    binomialName: "Begonia cv. 'Tiger Kitten'",
+    links: [
+      'https://garden.org/plants/view/161798/Begonia-Tiger-Kitten/',
+      'https://davesgarden.com/guides/pf/go/121719/#b'
+    ]
+  }, {
+    binomialName: 'Begonia foliosa var. miniata',
+    synonyms: ['B. fuchsioides'],
+    links: ['https://en.wikipedia.org/wiki/Begonia_foliosa']
+  }, {
+    binomialName: 'Begonia luxurians',
+    commonNames: ['palm leaf begonia'],
+    links: ['http://www.plantsrescue.com/tag/begonia-luxurians/']
+  }, {
+    binomialName: 'Begonia semperflorens',
+    commonNames: ['Cocktail whiskey']
+  }, {
+    binomialName: 'Aeschynanthus longicaulis',
+    commonNames: ['black pagoda lipstick plant'],
+    links: [
+      'https://en.wikipedia.org/wiki/Aeschynanthus_longicaulis',
+      'http://www.guide-to-houseplants.com/lipstick-plant.html'
+    ]
+  }, {
+    binomialName:'Tradescantia zebrina',
+    links: ['https://en.wikipedia.org/wiki/Tradescantia_zebrina']
+  }, {
+    binomialName: "Tradescantia fluminensis cv. 'Laekenensis Rainbow'",
+    links: ['https://davesgarden.com/guides/pf/showimage/120313/']
+  }, {
+    binomialName: 'Tradescantia pallida',
+    commonNames: ['Purple heart']
+  }, {
+    binomialName: 'Chlorophytum comosum',
+    commonNames: ['Spider plant'],
+    links: ['https://www.thespruce.com/spider-plants-chlorophytum-definition-1902773']
+  }, {
+    binomialName: 'Quercus arizonica',
+    commonNames: ['Arizona white oak'],
+    links: [
+      'https://en.wikipedia.org/wiki/Quercus_arizonica',
+      'http://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=623',
+      'https://www.wildflower.org/plants/result.php?id_plant=QUAR'
+    ]
+  }, {
+    binomialName: 'Quercus chrysolepis',
+    links: ['https://selectree.calpoly.edu/tree-detail/Quercus-chrysolepis']
+  }, {
+    binomialName: 'Quercus agrifolia'
+  }, {
+    binomialName: 'Rhus integrifolia',
+    links: ['https://en.wikipedia.org/wiki/Rhus_integrifolia']
+  }, {
+    binomialName: 'Prunus ilicifolia ssp. lyonii',
+    links: [
+      'https://calscape.org/Prunus-ilicifolia-ssp.-lyonii-()',
+      'http://mother-natures-backyard.blogspot.com/2018/06/plant-of-month-june-evergreen-cherry.html?m=1'
+    ]
+  }, {
+    binomialName: 'Ledebouria socialis',
+    links: [
+      'https://en.wikipedia.org/wiki/Ledebouria_socialis',
+      'http://www.cactus-art.biz/schede/LEDEBOURIA/Ledebouria_socialis/Ledebouria_socialis/Ledebouria_socialis.htm'
+    ]
+  }, {
+    binomialName: 'Calathea lancifolia',
+    links: ['https://en.wikipedia.org/wiki/Calathea_lancifolia']
+  }, {
+    binomialName: 'Impatiens sodenii',
+    links: ['https://en.wikipedia.org/wiki/Impatiens_sodenii']
+  }, {
+    binomialName: 'Impatiens balsamina',
+    links: ['https://identify.plantnet.org/the-plant-list/species/Impatiens%20balsamina%20L./data']
+  }, {
+    binomialName: 'Brugmansia sanguinea',
+    links: [
+      'https://en.wikipedia.org/wiki/Brugmansia_sanguinea',
+      'https://www.finegardening.com/article/angels-trumpets-big-blooms-with-unbeatable-fragrance'
+    ]
+  }, {
+    binomialName: 'Pittosporum undulatum',
+    links: [
+      'https://en.wikipedia.org/wiki/Pittosporum_undulatum',
+      'https://keyserver.lucidcentral.org/weeds/data/media/Html/pittosporum_undulatum.htm'
+    ]
+  }, {
+    binomialName: 'Arbutus unedo',
+    links: [
+      'https://selectree.calpoly.edu/tree-detail/arbutus-unedo',
+      'https://en.wikipedia.org/wiki/Arbutus_unedo'
+    ]
+  }, {
+    binomialName: 'Arctostaphylos manzanita Dr. Hurd',
+    links: ['https://www.calfloranursery.com/plants/arctostaphylos-manzanita-dr-hurd']
+  }, {
+    binomialName: 'Pachira aquatica',
+    commonNames: 'Money Tree'
+  }, {
+    binomialName: 'Peperomia rosso'
+  }, {
+    binomialName: 'Philodendron birkin'
+  }, {
+    binomialName: "Picea pungens 'Baby Blue Eyes'"
+  }, {
+    binomialName: "Acer palmatum 'Beni-kawa'"
+  }, {
+    binomialName: 'Pavonia missionum',
+    commonNames: ['Red Mallow'],
+    links: ['https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3792']
+  }, {
+    binomialName: 'Strobilanthes penstemonoides',
+  links: ['https://en.wikipedia.org/wiki/Strobilanthes_penstemonoides']
+  }, {
+    binomialName: 'Asarum splendens',
+    commonNames: ['Chinese wild ginger']
   }
 ];

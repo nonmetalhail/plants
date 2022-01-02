@@ -20,6 +20,8 @@ function buildTreeData(plantData, taxoData) {
       current = checkStepInTree(current, groupName, last);
     }
   }
+
+  sortTree(tree);
   return tree;
 }
 
@@ -62,6 +64,14 @@ function stripGenus(name) {
   const genus = arr[0][0];
   const species = arr.slice(1).join(' ');
   return `${genus}. ${species}`;
+}
+
+function sortTree(tree) {
+  if (!tree.children) return;
+  tree.children.sort((a,b) => a.name.localeCompare(b.name));
+  for (const child of tree.children) {
+    sortTree(child);
+  }
 }
 
 (async function() {
