@@ -1742,4 +1742,4 @@ function tree() {
   return tree;
 }
 
-export { create, hierarchy, linkHorizontal, stratify, tree };
+export { create, hierarchy, linkHorizontal, select, stratify, tree };

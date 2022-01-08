@@ -53,7 +53,7 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
   // Compute the layout.
   const dx = 10;
   const dy = width / (root.height + padding);
-  tree().nodeSize([dx, dy])(root);
+  tree().nodeSize([dx, 180])(root);
 
   // Center the tree.
   let x0 = Infinity;

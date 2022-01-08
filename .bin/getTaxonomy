@@ -11,6 +11,7 @@ function pause() {
 (async function() {
   const { plants } = await import('../src/data/plants.mjs');
   const { taxonomy } = await import('../src/data/taxonomy.mjs');
+  const { manual } = await import('../src/data/manual-taxonomy.mjs');
 
   const path = require('path');
   const fs = require('fs');
@@ -19,18 +20,32 @@ function pause() {
   const URL = 'https://api.gbif.org/v1/species/match?verbose=true&genus=';
   const ROOT = path.resolve(__dirname, '..');
   const OUTFILE = path.join(ROOT, 'src', 'data', 'taxonomy.mjs');
+  const LOGFILE = path.join(ROOT, 'src', 'data', 'failures.log');
 
   const args = process.argv.slice(2);
-  const taxo = args.indexOf('-f') > -1 ? {} : {...taxonomy};
+  const taxo = args.indexOf('-f') > -1 ? {
+  } : {...taxonomy};
+  let failures = '';
   for (const plant of plants) {
+    // if we already have it in our data, skip it
     if (taxo[plant.binomialName]) continue;
+
+    // if we are going to do a manual mixin, use that
+    if (manual[plant.binomialName]) {
+        console.log(`${plant.binomialName} was added from manual-taxonomy data`);
+        taxo[plant.binomialName] = manual[plant.binomialName];
+      continue;
+    }
+
+    // query API for info
     try {
       console.log(`Getting ${plant.binomialName}`);
       const response = await axios.get(encodeURI(`${URL}${plant.binomialName}`));
       if (response.data.matchType !== "EXACT") {
-        console.log('***************************************');
-        console.log(`Submitted: ${plant.binomialName}`);
-        console.log(response.data);
+        console.log(`--> ${plant.binomialName} wasnt found`);
+        failures += '***************************************\n';
+        failures += `${plant.binomialName}\n`;
+        failures += `${JSON.stringify(response.data)}\n`;
       }
 
       if (response.data.matchType === "EXACT" || args.indexOf('-a') > -1) {
@@ -44,6 +59,5 @@ function pause() {
   }
   const data = `export const taxonomy = ${JSON.stringify(taxo)}`;
   fs.writeFileSync(OUTFILE, data, 'utf8');
-
-
+  fs.writeFileSync(LOGFILE, failures, 'utf8');
 })();

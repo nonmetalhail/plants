@@ -109,13 +109,13 @@ export const plants = [
     binomialName: 'Cereus forbesii cv. Spiralis',
     commonNames: ['Spiral cactus']
   }, {
-    binomialName: 'Cereus repandus',
+    binomialName: 'Cereus repandus f. spineless',
     commonNames: ['Spineless apple cactus'],
     synonyms: ['Cereus peruvianus'],
     confidence: 2,
     links: ['https://en.wikipedia.org/wiki/Espostoa_lanata']
   }, {
-    binomialName: 'Cereus repandus var. monstrose',
+    binomialName: 'Cereus repandus f. monstrose',
     commonNames: ['Peruvian apple cactus'],
     links: ['https://en.wikipedia.org/wiki/Espostoa_lanata']
   }, {
@@ -125,8 +125,9 @@ export const plants = [
       'https://thebelmontrooster.com/families-of-familiar-plants/cactaceae-family/cereus-repandus-monstruosus-cv-rojo-syn-cereus-peruvianus-monstrose-cv-rojo/'
     ]
   }, {
-    binomialName: 'Cereus validus fa. monstrose "Ming Thing"',
-    links: ['https://cactusjungle.com/plants/cereus-monstrose-ming-thing/']
+    binomialName: 'Cereus forbesii fa. monstrose "Ming Thing"',
+    links: ['https://cactusjungle.com/plants/cereus-monstrose-ming-thing/'],
+    synonyms: ['C. validus']
   }, {
     binomialName: 'Pachycereus pringlei',
     commonNames: ['Cardon', 'Mexican giant cardon'],
@@ -147,7 +148,8 @@ export const plants = [
     commonNames: ['Golden Barrel (cluster)'],
     links: ['https://en.wikipedia.org/wiki/Echinocactus_grusonii']
   }, {
-    binomialName: 'Echniocereus v rubispinus'
+    binomialName: 'Echinocereus rigidissimus subs. rubispinus',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/10573/Echinocereus_rigidissimus_subs._rubispinus']
   }, {
     binomialName: 'Echinocereus engelmannii',
     commonNames: ["Engelmann's Hedgehog"],
@@ -183,7 +185,7 @@ export const plants = [
     binomialName: 'Cephalocereus senilis',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/6893/Cephalocereus_senilis']
   }, {
-    binomialName: 'Tephrocactus papyracanthus'
+    binomialName: 'Tephrocactus articulatus var. papyracanthus'
   }, {
     binomialName: 'Euphorbia milii',
     links: ['https://en.wikipedia.org/wiki/Euphorbia_milii']
@@ -249,8 +251,8 @@ export const plants = [
     commonNames: ['Foxtail Agave'],
     links: ['https://en.wikipedia.org/wiki/Agave_attenuata']
   }, {
-    binomialName: 'A. ocahui x A. attenuata',
-    commonNames: ['Agave Blue Glow']
+    binomialName: "Agave cv. 'Blue Glow'",
+    hybrid: ['Agave ocahui', 'Agave attenuata'],
   }, {
     binomialName: 'Agave filifera',
     commonNames: ['Thread-leaf agave'],
@@ -281,7 +283,7 @@ export const plants = [
     binomialName: 'Aloe ciliaris',
     confidence: 2
   }, {
-    binomialName: "Aloe California",
+    binomialName: "Aloe cv. 'California'",
     confidence: 3
   }, {
     binomialName: 'Gonialoe variegata',
@@ -452,15 +454,16 @@ export const plants = [
       'https://en.wikipedia.org/wiki/Arbutus_unedo'
     ]
   }, {
-    binomialName: 'Arctostaphylos manzanita Dr. Hurd',
+    binomialName: "Arctostaphylos manzanita f. 'Dr. Hurd'",
     links: ['https://www.calfloranursery.com/plants/arctostaphylos-manzanita-dr-hurd']
   }, {
     binomialName: 'Pachira aquatica',
     commonNames: 'Money Tree'
   }, {
-    binomialName: 'Peperomia rosso'
+    binomialName: 'Peperomia cv. rosso',
+    hybrid: ['Peperomia metallica', 'Peperomia  marmorata']
   }, {
-    binomialName: 'Philodendron birkin'
+    binomialName: 'Philodendron cv. birkin'
   }, {
     binomialName: "Picea pungens 'Baby Blue Eyes'"
   }, {
@@ -475,5 +478,35 @@ export const plants = [
   }, {
     binomialName: 'Asarum splendens',
     commonNames: ['Chinese wild ginger']
+  }, {
+    binomialName: 'Malus domestica cv. Braeburn',
+    commonNames: ['Braeburn apple']
+  }, {
+    binomialName: 'Citrus microcarpa v. variegata',
+    commonNames: ['Calamondin lime']
+  }, {
+    binomialName: 'Citrus latifolia',
+    commonNames: ['Bearss lime'],
+    links: ['https://en.wikipedia.org/wiki/Persian_lime']
+  }, {
+    binomialName: 'Vaccinium elliottii',
+    commonNames: ['Blueberry Elliott'],
+    links: ['https://en.wikipedia.org/wiki/Vaccinium_elliottii']
+  }, {
+    binomialName: "Vaccinium corymbosum cv. 'Misty'",
+    commonNames: ['Misty Blueberry']
+  }, {
+    binomialName: 'Coffea arabica',
+    confidence: 3,
+    commonNames: ['Coffee plant']
+  }, {
+    binomialName: 'Syagrus romanzoffiana',
+    commonNames: ['Queen Palm'],
+    links: ['https://en.wikipedia.org/wiki/Syagrus_romanzoffiana']
+  }, {
+    binomialName: 'Dendrobium kingianum',
+    commonNames: ['Rebecca’s orchid']
   }
+
+
 ];
