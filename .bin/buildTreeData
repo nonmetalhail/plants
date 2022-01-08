@@ -74,6 +74,24 @@ function sortTree(tree) {
   }
 }
 
+function validateTree(plants, taxonomy) {
+  let errors = '';
+  for (const plant of plants) {
+    const taxo = taxonomy[plant.binomialName];
+    if (!taxo) {
+      continue;
+    }
+    const taxoGenus = taxo[CLASSIFICATION[5]];
+    const plantGenus = plant.binomialName.split(' ')[0];
+    if (taxoGenus.toUpperCase() !== plantGenus.toUpperCase()) {
+      errors += `${plant.binomialName} ==> ${taxoGenus}\n`;
+    }
+  }
+  return errors;
+}
+
+
+
 (async function() {
   const { plants } = await import('../src/data/plants.mjs');
   const { taxonomy } = await import('../src/data/taxonomy.mjs');
@@ -87,4 +105,10 @@ function sortTree(tree) {
   const tree = buildTreeData(plants, taxonomy);
   const data = `export const treeData = ${JSON.stringify(tree)}`;
   fs.writeFileSync(OUTFILE, data, 'utf8');
+
+  const errors = validateTree(plants, taxonomy);
+  if (errors) {
+    const ERRORFILE = path.join(ROOT, 'src','data', 'validation-errors.log');
+    fs.writeFileSync(ERRORFILE, errors, 'utf8');
+  }
 })();

@@ -6,6 +6,7 @@
 	"scripts": {
 		"build:d3": "rollup -c rollup.config.js",
     "build:data": "npm run taxonomy:update && npm run treedata",
+		"build:data:force": "npm run taxonomy:overwrite && npm run treedata",
 		"ic": "git clean -xfd && npm i",
 		"lint": "eslint \"**/*.js\" --fix",
 		"start": "python -m SimpleHTTPServer 8888",

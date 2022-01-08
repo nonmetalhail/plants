@@ -82,9 +82,13 @@ export const plants = [
     synonyms: ['Trichocereus bridgesii f. monstruosus'],
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/18442/Echinopsis_lageniformis_f._monstruosa_(Short_joined_type)']
   }, {
-    binomialName: 'Trichocereus pachanoi',
+    binomialName: 'Echinopsis pachanoi',
     commonNames: ['San Pedro Cactus'],
-    links: ['https://www.gardenia.net/plant/trichocereus-pachanoi']
+    synonyms: ['Trichocereus pachanoi'],
+    links: [
+      'https://www.gardenia.net/plant/trichocereus-pachanoi',
+      'https://en.wikipedia.org/wiki/Echinopsis_pachanoi'
+    ]
   }, {
     binomialName: 'Myrtillocactus geometrizans',
     commonNames: ['Whortleberry cactus'],
@@ -92,6 +96,7 @@ export const plants = [
   }, {
     binomialName: 'Cleistocactus strausii',
     commonNames: ['Silver torch'],
+    synonyms: ['Borzicactus strausii'],
     links: ['https://en.wikipedia.org/wiki/Cleistocactus_strausii']
   }, {
     binomialName: 'Espostoa lanata',
@@ -177,6 +182,7 @@ export const plants = [
   }, {
     binomialName: 'Cleistocactus winteri',
     commonNames: ['Golden Rat Tail'],
+    synonyms: ['Borzicactus winteri'],
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/3784/Cleistocactus_winteri']
   }, {
     binomialName: 'Oreocereus trollii',
@@ -280,7 +286,7 @@ export const plants = [
     binomialName: 'Aloe arborescens',
     commonNames: ['Torch Aloe']
   }, {
-    binomialName: 'Aloe ciliaris',
+    binomialName: 'Aloiampelos ciliaris',
     confidence: 2
   }, {
     binomialName: "Aloe cv. 'California'",
@@ -350,7 +356,8 @@ export const plants = [
   }, {
     binomialName: 'Crassula tetragona'
   }, {
-    binomialName: 'Haworthia fasciata',
+    binomialName: 'Haworthiopsis fasciata',
+    synonyms: ['Haworthia fasciata '],
     commonNames: ['Zebra plant']
   }, {
     binomialName: 'Kalanchoe fedtschenkoi',
@@ -427,7 +434,8 @@ export const plants = [
       'http://www.cactus-art.biz/schede/LEDEBOURIA/Ledebouria_socialis/Ledebouria_socialis/Ledebouria_socialis.htm'
     ]
   }, {
-    binomialName: 'Calathea lancifolia',
+    binomialName: 'Goeppertia lancifolia',
+    synonyms: ['Calathea lancifolia'],
     links: ['https://en.wikipedia.org/wiki/Calathea_lancifolia']
   }, {
     binomialName: 'Impatiens sodenii',
