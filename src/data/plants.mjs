@@ -193,6 +193,15 @@ export const plants = [
   }, {
     binomialName: 'Tephrocactus articulatus var. papyracanthus'
   }, {
+    binomialName: 'Disocactus speciosus',
+    confidence: 3
+  }, {
+    binomialName: 'Disocactus × mallisonii',
+    links: ['https://worldofsucculents.com/disocactus-mallisonii-rats-tail-cactus/'],
+    note: 'Orticultural hybrid beetween Disocactus flagelliformis and Disocactus speciosus'
+  }, {
+    binomialName: 'Echinocereus reichenbachii f. albispinus'
+  }, {
     binomialName: 'Euphorbia milii',
     links: ['https://en.wikipedia.org/wiki/Euphorbia_milii']
   }, {
@@ -514,7 +523,46 @@ export const plants = [
   }, {
     binomialName: 'Dendrobium kingianum',
     commonNames: ['Rebecca’s orchid']
+  }, {
+    binomialName: 'Ficus elastica cv. Decora',
+    commonNames: ['Rubber tree'],
+    links: ['https://en.wikipedia.org/wiki/Ficus_elastica']
+  }, {
+    binomialName: 'Ficus elastica cv. Tineke',
+    commonNames: ['Rubber tree'],
+    links: ['https://en.wikipedia.org/wiki/Ficus_elastica']
+  }, {
+    binomialName: 'Ficus benjamina',
+    commonNames: ['Ficus tree'],
+    links: ['https://en.wikipedia.org/wiki/Ficus_benjamina']
+  }, {
+    binomialName: 'Ficus lyrata',
+    commonNames: ['Fiddle leaf fig'],
+    links: ['https://en.wikipedia.org/wiki/Ficus_lyrata']
+  }, {
+    binomialName: 'Asplenium nidus',
+    commonNames: ["Bird’s nest fern"],
+    links: ['https://en.wikipedia.org/wiki/Asplenium_nidus']
+  }, {
+    binomialName: 'Dracaena marginata'
+  }, {
+    binomialName: 'Calathea roseopicta'
+  }, {
+    binomialName: "Passiflora edulis cv. 'Nancy Garrison'",
+    commonNames: ['Passion fruit'],
+    links: ['https://davesgarden.com/guides/pf/go/66165/#b']
+  }, {
+    binomialName: "Passiflora caerulea cv. 'Constance Elliott'",
+    commonNames: ['Passion flower'],
+    links: ['https://davesgarden.com/guides/pf/go/54128/#b']
+  }, {
+    binomialName: 'Scindapsus pictus'
+  }, {
+    binomialName: 'Epipremnum aureum',
+    commonNames: ['Pothos'],
+    links: ['https://en.wikipedia.org/wiki/Epipremnum_aureum']
+  }, {
+    binomialName: 'Faucaria felina subs. tuberculosa',
+    links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11320/Faucaria_felina_subs._tuberculosa']
   }
-
-
 ];

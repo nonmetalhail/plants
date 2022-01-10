@@ -258,5 +258,24 @@ export const manual = {
     "familyKey":3065,
     "genusKey":3106738,
     "class":"Magnoliopsida"
+  },
+  'Calathea roseopicta': {
+    "scientificName":"Calathea roseopicta (Linden ex Lem.) Regel",
+    "canonicalName":"Calathea roseopicta",
+    "matchType":"MANUAL",
+    "kingdom":"Plantae",
+    "phylum":"Tracheophyta",
+    "order":"Zingiberales",
+    "family":"Marantaceae",
+    "genus":"Calathea",
+    "species":"Calathea roseopicta",
+    "kingdomKey":6,
+    "phylumKey":7707728,
+    "classKey":196,
+    "orderKey":627,
+    "familyKey":8784,
+    "genusKey":8394666,
+    "speciesKey":8023661,
+    "class":"Liliopsida"
   }
 }
