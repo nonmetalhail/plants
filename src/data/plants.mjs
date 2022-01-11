@@ -475,7 +475,7 @@ export const plants = [
     links: ['https://www.calfloranursery.com/plants/arctostaphylos-manzanita-dr-hurd']
   }, {
     binomialName: 'Pachira aquatica',
-    commonNames: 'Money Tree'
+    commonNames: ['Money Tree']
   }, {
     binomialName: 'Peperomia cv. rosso',
     hybrid: ['Peperomia metallica', 'Peperomia  marmorata']

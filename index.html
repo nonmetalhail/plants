@@ -8,6 +8,7 @@
       :root {
         --taxo-primary: #e97724;
         --taxo-secondary: #1688db;
+        --taxo-tertiary: #e5e5e5;
 
         --taxo-grey-1: #000;
         --taxo-grey-2: #666;
@@ -63,10 +64,57 @@
       }
 
       #info-card {
-        width: 100px;
-        height: 100px;
-        background-color: grey;
+        position: fixed;
+        padding: 10px 15px;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px var(--taxo-grey-3);
+        font-family: sans-serif;
+      }
+
+      .hidden {
+        opacity: 0;
+        transition: all 0.1s ease-out;
+      }
+
+      #card-clear-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      #card-clear {
         position: absolute;
+        background-color: transparent;
+        border: none;
+        font-size: 25px;
+        margin-inline-end: -8px;
+        margin-block-start: -8px;
+        color: var(--taxo-grey-3);
+      }
+
+      #card-clear:hover {
+        color: var(--taxo-grey-1);
+      }
+
+      #card-clear:active {
+        color: var(--taxo-grey-2);
+      }
+
+      .biomial-name {
+        margin-block-end: 10px;
+      }
+
+      .common-names {
+        margin-block-start: 5px;
+        margin-block-end: 10px;
+        color: var(--taxo-grey-2);
+      }
+
+      .synonyms {
+        margin-block-start: 5px;
+        font-weight: normal;
+        font-style: italic;
       }
 
       svg text{
@@ -76,7 +124,10 @@
   </head>
 
   <body>
-    <div id="info-card"></div>
+    <div id="info-card" class="hidden">
+      <div id="card-clear-wrapper"><button id="card-clear">×</button></div>
+      <div id="info-card-slot"></div>
+    </div>
     <div id="chart-container"></div>
   </body>
 
