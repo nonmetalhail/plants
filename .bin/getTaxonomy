@@ -12,10 +12,9 @@ function pause() {
   const { plants } = await import('../src/data/plants.mjs');
   const { taxonomy } = await import('../src/data/taxonomy.mjs');
   const { manual } = await import('../src/data/manual-taxonomy.mjs');
-
-  const path = require('path');
-  const fs = require('fs');
-  const axios = require('axios');
+  const path = await import('path');
+  const fs = await import('fs');
+  const axios = await import('axios');
 
   const URL = 'https://api.gbif.org/v1/species/match?verbose=true&genus=';
   const ROOT = path.resolve(__dirname, '..');

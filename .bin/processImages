@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+(async function() {
+  const { plantFolderName } = await import('./utils/plantFolderName.mjs');
+  const { plants } = await import('../src/data/plants.mjs');
+  const { ImagePool } =  await import('@squoosh/lib');
+  const { cpus } = await import('os');
+  const path = await import('path');
+  const fs = await import('fs/promises');
+
+  const args = process.argv.slice(2);
+  const imagePool = new ImagePool(cpus().length);
+  const ROOT = path.resolve(__dirname, '..');
+  const IMGFOLDER = path.join(ROOT, 'src', 'images');
+  const preprocessOptions = {
+    resize: {
+      enabled: true,
+      width: 400
+    }
+  };
+  const encodeOptions = { webp: {} };
+
+  for (const plant of plants) {
+    const folder = plantFolderName(plant);
+    const inFolder = path.join(IMGFOLDER, folder);
+    const outFolder = path.join(inFolder, 'processed');
+    const files = (await fs.readdir(inFolder, { withFileTypes: true }))
+      .filter(dirent => !dirent.isDirectory())
+      .map(dirent => dirent.name);
+
+    if (!files.length) continue;
+
+    const alreadyProcessedFiles = args.indexOf('-f') > -1 ?
+      new Set() :
+      new Set((await fs.readdir(outFolder)).map(f => f.split('.')[0]));
+
+    for (const file of files) {
+      const filename = file.split('.')[0];
+      if (alreadyProcessedFiles.has(filename)) continue;
+
+      const filePath = path.join(inFolder, file);
+      const imgFile = await fs.readFile(filePath);
+      const image = imagePool.ingestImage(imgFile);
+
+      await image.decoded;
+      await image.preprocess(preprocessOptions);
+      await image.encode(encodeOptions);
+      await imagePool.close();
+
+      const rawEncodedImage = (await image.encodedWith.webp). binary;
+      const outFile = path.join(outFolder, `${filename}.webp`);
+      await fs.mkdir(outFolder, { recursive: true });
+      await fs.writeFile(outFile, rawEncodedImage);
+    };
+  }
+})();

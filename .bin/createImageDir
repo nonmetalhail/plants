@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+(async function() {
+  const { plantFolderName } = await import('./utils/plantFolderName.mjs');
+  const { plants } = await import('../src/data/plants.mjs');
+  const path = await import('path');
+  const fs = await import('fs/promises');
+
+  const ROOT = path.resolve(__dirname, '..');
+  const IMGFOLDER = path.join(ROOT, 'src', 'images');
+
+  for (const plant of plants) {
+    const folder = plantFolderName(plant);
+    const dir = path.join(IMGFOLDER, folder);
+    fs.mkdir(dir, { recursive: true });
+  }
+})();

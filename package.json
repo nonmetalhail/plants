@@ -5,14 +5,19 @@
 	"main": "index.js",
 	"scripts": {
 		"build:d3": "rollup -c rollup.config.js",
-    "build:data": "npm run taxonomy:update && npm run treedata",
+		"build:data": "npm run taxonomy:update && npm run treedata",
 		"build:data:force": "npm run taxonomy:overwrite && npm run treedata",
 		"ic": "git clean -xfd && npm i",
 		"lint": "eslint \"**/*.js\" --fix",
 		"start": "python -m SimpleHTTPServer 8888",
 		"taxonomy:update": ".bin/getTaxonomy",
 		"taxonomy:overwrite": ".bin/getTaxonomy -f",
-		"treedata": ".bin/buildTreeData"
+		"treedata": ".bin/buildTreeData",
+		"image:dir": ".bin/createImageDir",
+		"image:process": ".bin/processImages",
+		"image:process:force": ".bin/processImages -f",
+		"image:data": ".bin/createImageData",
+		"image:build": "npm run image:process && npm run image:data"
 	},
 	"repository": {
 		"type": "git",
@@ -26,6 +31,7 @@
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.16.5",
 		"@babel/preset-env": "^7.16.5",
+		"@squoosh/lib": "^0.4.0",
 		"axios": "^0.24.0",
 		"babel-eslint": "^10.1.0",
 		"eslint": "^6.0.0",

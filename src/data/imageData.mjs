@@ -1,0 +1,1 @@
+export const images = {"Agave americana v. 'Marginata'":["6b9c822c71dbe398b744b23cb5374040.webp"],"Pachypodium lamerei":["https://en.wikipedia.org/wiki/Pachypodium_lamerei#/media/File:PachypodiumLamerei.jpg"]}

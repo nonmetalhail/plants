@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+(async function() {
+  const { plantFolderName } = await import('./utils/plantFolderName.mjs');
+  const { plants } = await import('../src/data/plants.mjs');
+  const { externalImages } = await import('../src/data/external-images.mjs');
+  const path = await import('path');
+  const fs = await import('fs');
+
+  const ROOT = path.resolve(__dirname, '..');
+  const IMGFOLDER = path.join(ROOT, 'src', 'images');
+  const OUTFILE = path.join(ROOT, 'src', 'data', 'imageData.mjs');
+  const data = {};
+
+  for (const plant of plants) {
+    const name = plant.binomialName;
+    const folder = plantFolderName(plant);
+    const plantImgFolder = path.join(IMGFOLDER, folder, 'processed');
+
+    if (!fs.existsSync(plantImgFolder)) continue;
+    const files = fs.readdirSync(plantImgFolder);
+
+    if (files?.length) {
+      data[name] = files;
+    }
+  }
+
+  for (const [name, files] of Object.entries(externalImages)) {
+    data[name] = data[name] ?
+      [...data[name], ...files] :
+      files;
+  }
+
+  const images = `export const images = ${JSON.stringify(data)}`;
+  fs.writeFileSync(OUTFILE, images, 'utf8');
+})();
