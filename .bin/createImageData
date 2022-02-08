@@ -7,6 +7,7 @@
   const fs = await import('fs');
 
   const ROOT = path.resolve(__dirname, '..');
+  const IMGPATH = './src/images/dist';
   const IMGFOLDER = path.join(ROOT, 'src', 'images', 'dist');
   const OUTFILE = path.join(ROOT, 'src', 'data', 'imageData.mjs');
   const data = {};
@@ -18,9 +19,9 @@
 
     if (!fs.existsSync(plantImgFolder)) continue;
     const files = fs.readdirSync(plantImgFolder);
-
+    const filesPaths = files.map((f) => `${IMGPATH}/${folder}/${f}`);
     if (files?.length) {
-      data[name] = files;
+      data[name] = filesPaths;
     }
   }
 

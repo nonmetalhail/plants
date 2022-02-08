@@ -3,6 +3,8 @@ A visualization of my plant taxonomies
 
 # Commands
 
+Node 16 is required for these scripts.
+
 ## General
  ### build:d3
  Builds the d3 bundle specified in `src/d3_bundle`
