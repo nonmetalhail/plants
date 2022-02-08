@@ -7,14 +7,14 @@
   const fs = await import('fs');
 
   const ROOT = path.resolve(__dirname, '..');
-  const IMGFOLDER = path.join(ROOT, 'src', 'images');
+  const IMGFOLDER = path.join(ROOT, 'src', 'images', 'dist');
   const OUTFILE = path.join(ROOT, 'src', 'data', 'imageData.mjs');
   const data = {};
 
   for (const plant of plants) {
     const name = plant.binomialName;
     const folder = plantFolderName(plant);
-    const plantImgFolder = path.join(IMGFOLDER, folder, 'processed');
+    const plantImgFolder = path.join(IMGFOLDER, folder);
 
     if (!fs.existsSync(plantImgFolder)) continue;
     const files = fs.readdirSync(plantImgFolder);

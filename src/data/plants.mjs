@@ -30,7 +30,8 @@ export const plants = [
       'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1141/Parodia_schumanniana'
     ]
   }, {
-    binomialName: 'Parodia leninghausii'
+    binomialName: 'Parodia leninghausii',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/14697/Parodia_leninghausii']
   }, {
     binomialName: 'Parodia erubescens',
     confidence: 2,
@@ -38,6 +39,10 @@ export const plants = [
       'https://identify.plantnet.org/the-plant-list/species/Parodia%20erubescens%20(Osten)%20D.R.%20Hunt/data',
       'https://cactusjungle.com/plants/parodia-erubescens/'
     ]
+  }, {
+    binomialName: 'Parodia magnifica',
+    confidence: 2,
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/20453/Parodia_magnifica']
   }, {
     binomialName: 'Mammillaria spinosissima',
     links: ['https://en.wikipedia.org/wiki/Mammillaria_spinosissima']
@@ -62,6 +67,15 @@ export const plants = [
       'https://cactusjungle.com/plants/mammillaria-rhodantha-ssp-pringlei/',
       'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/14525/Mammillaria_rhodantha_subs._pringlei'
     ]
+  }, {
+    binomialName: 'Mammillaria senilis',
+    confidence: 2,
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/9677/Mammillaria_senilis']
+  }, {
+    binomialName: 'Mammillaria vetula subs. gracilis',
+    confidence: 2,
+    synonyms: ['M. gracilis fragilis'],
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/9166/Mammillaria_vetula_subs._gracilis']
   }, {
     binomialName: 'Echinopsis schickendantzii',
     confidence: 2,

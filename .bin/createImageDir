@@ -6,7 +6,7 @@
   const fs = await import('fs/promises');
 
   const ROOT = path.resolve(__dirname, '..');
-  const IMGFOLDER = path.join(ROOT, 'src', 'images');
+  const IMGFOLDER = path.join(ROOT, 'src', 'images', 'raw');
 
   for (const plant of plants) {
     const folder = plantFolderName(plant);

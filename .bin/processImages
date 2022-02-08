@@ -8,9 +8,9 @@
   const fs = await import('fs/promises');
 
   const args = process.argv.slice(2);
-  const imagePool = new ImagePool(cpus().length);
   const ROOT = path.resolve(__dirname, '..');
-  const IMGFOLDER = path.join(ROOT, 'src', 'images');
+  const IMGFOLDER = path.join(ROOT, 'src', 'images', 'raw');
+  const DISTFOLDER = path.join(ROOT, 'src', 'images', 'dist');
   const preprocessOptions = {
     resize: {
       enabled: true,
@@ -18,20 +18,21 @@
     }
   };
   const encodeOptions = { webp: {} };
+  const IMGEXT = new Set(['jpg', 'jpeg', 'png']);
 
   for (const plant of plants) {
     const folder = plantFolderName(plant);
     const inFolder = path.join(IMGFOLDER, folder);
-    const outFolder = path.join(inFolder, 'processed');
+    const outFolder = path.join(DISTFOLDER, folder);
     const files = (await fs.readdir(inFolder, { withFileTypes: true }))
-      .filter(dirent => !dirent.isDirectory())
+      .filter(dirent => !dirent.isDirectory() && IMGEXT.has(dirent.name.split('.')[1]))
       .map(dirent => dirent.name);
 
     if (!files.length) continue;
 
     const alreadyProcessedFiles = args.indexOf('-f') > -1 ?
       new Set() :
-      new Set((await fs.readdir(outFolder)).map(f => f.split('.')[0]));
+      new Set((await fs.readdir(outFolder).catch((err) => [])).map(f => f.split('.')[0]));
 
     for (const file of files) {
       const filename = file.split('.')[0];
@@ -39,9 +40,14 @@
 
       const filePath = path.join(inFolder, file);
       const imgFile = await fs.readFile(filePath);
+      const imagePool = new ImagePool(cpus().length);
       const image = imagePool.ingestImage(imgFile);
 
-      await image.decoded;
+      const decode = await image.decoded.catch((err) => {
+        console.log(`${plant.binomialName}: ${file} errored: ${err}`);
+        return null;
+      });
+      if (!decode) continue;
       await image.preprocess(preprocessOptions);
       await image.encode(encodeOptions);
       await imagePool.close();
@@ -50,6 +56,8 @@
       const outFile = path.join(outFolder, `${filename}.webp`);
       await fs.mkdir(outFolder, { recursive: true });
       await fs.writeFile(outFile, rawEncodedImage);
+
+      console.log(`created ${plant.binomialName} : ${filename}`);
     };
   }
 })();
