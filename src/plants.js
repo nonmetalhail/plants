@@ -5,21 +5,24 @@ import * as d3 from './d3_bundle/dist/pd3.js';
 class Taxonomy {
   constructor({
     containerSelector = '#chart-container',
-    tooltipSelector = '#info-card',
-    tooltipSlotSelector = '#info-card-slot',
-    tooltipButtonSelector = '#card-clear',
+    infoCardContent = '#info-card-content',
+    infoSlotSelector = '#info-card-slot',
+    infoButtonSelector = '#card-clear',
     data
   }) {
     this.containerSelector = containerSelector;
-    this.tooltipSelector = tooltipSelector;
-    this.tooltipSlotSelector = tooltipSlotSelector;
-    this.tooltipButtonSelector = tooltipButtonSelector;
+    this.infoCardContent = infoCardContent;
+    this.infoSlotSelector = infoSlotSelector;
+    this.infoButtonSelector = infoButtonSelector;
     this._data = { data };
 
+    const width = 1200;
+    const dy = width * .129;
+
     this._sizing = {
-      width: 1400,
-      dx: 11,
-      dy: 180,
+      width, //total width
+      dx: 11, //vertical spacing
+      dy, // horizontal spacing
       padding: 1 // horizontal padding for first and last column
     };
     this._styles = {
@@ -109,11 +112,11 @@ class Taxonomy {
     const textNode = svg.append('g')
       .classed('nodes', true);
 
-    const tooltip = d3.select(this.tooltipSelector);
-    const tooltipSlot = d3.select(this.tooltipSlotSelector);
-    d3.select(this.tooltipButtonSelector).on('click', this.tooltipButtonClicked.bind(this));
+    const infoCardContent = d3.select(this.infoCardContent);
+    const infoSlot = d3.select(this.infoSlotSelector);
+    d3.select(this.infoButtonSelector).on('click', this.tooltipButtonClicked.bind(this));
 
-    this._nodes = { div, svg, linksNode, textNode, tooltip, tooltipSlot };
+    this._nodes = { div, svg, linksNode, textNode, infoCardContent, infoSlot };
   }
 
   buildTree() {
@@ -218,36 +221,36 @@ class Taxonomy {
       }
     });
 
-    this.displayTooltip(d, ancestors);
+    this.displayInfo(d, ancestors);
   }
 
   nodeLeave(evt, d) {
     for (const elem of this._selectedElems) {
       elem.classed('selected', false);
     }
-    this.clearTooltip();
+    this.clearInfo();
     this._selectedElems = [];
   }
 
-  displayTooltip(d, ancestors) {
+  displayInfo(d, ancestors) {
     clearTimeout(this._timeout);
     const names = ancestors.map((n) => n.data.name);
     const miniTree = `<div class="minitree">${this.drawAncestorTree(names)}</div>`;
     const cardData = this.generateCardData(d);
     const imageHtml = this.generateImageData(d);
     const html = `${miniTree}${cardData}${imageHtml}`;
-    this._nodes.tooltip
+    this._nodes.infoCardContent
       .classed('hidden', false);
-    this._nodes.tooltipSlot
+    this._nodes.infoSlot
       .html(html);
   }
 
-  clearTooltip() {
+  clearInfo() {
     this._timeout = setTimeout(() => {
-      this._nodes.tooltip
+      this._nodes.infoCardContent
         .classed('hidden', true)
         .on('transitionend', () => {
-          this._nodes.tooltipSlot.html('');
+          this._nodes.infoSlot.html('');
         }, { once: true });
     }, 300);
   }

@@ -56,16 +56,20 @@
   stroke-width: 3;
 }
 
+#wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+}
+
 #info-card {
-  max-width: 500px;
-  max-height: 100vh;
+  height: calc(100vh - 40px);
+  position: sticky;
+  top: 10px;
   overflow: auto;
-  position: fixed;
   padding: 10px 15px;
   background-color: white;
-  border: 1px solid grey;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px var(--taxo-grey-3);
+  border-left: 1px solid var(--taxo-grey-3);
   font-family: sans-serif;
 }
 
