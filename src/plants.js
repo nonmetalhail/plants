@@ -232,7 +232,7 @@ class Taxonomy {
   displayTooltip(d, ancestors) {
     clearTimeout(this._timeout);
     const names = ancestors.map((n) => n.data.name);
-    const miniTree = this.drawAncestorTree(names);
+    const miniTree = `<div class="minitree">${this.drawAncestorTree(names)}</div>`;
     const cardData = this.generateCardData(d);
     const imageHtml = this.generateImageData(d);
     const html = `${miniTree}${cardData}${imageHtml}`;
@@ -273,9 +273,9 @@ class Taxonomy {
     if (!imageData?.[data?.binomialName]) return '';
     const images = imageData[data.binomialName]
     .reduce((acc, val) => {
-      return `${acc}<img src="${val}" />`;
+      return `${acc}<img class="image" src="${val}" />`;
     }, '');
-    return `<div class="images">${images}</div>`;
+    return `<div class="imageGrid">${images}</div>`;
   }
 
   init() {
