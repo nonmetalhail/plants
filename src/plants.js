@@ -114,7 +114,7 @@ class Taxonomy {
 
     const infoCardContent = d3.select(this.infoCardContent);
     const infoSlot = d3.select(this.infoSlotSelector);
-    d3.select(this.infoButtonSelector).on('click', this.tooltipButtonClicked.bind(this));
+    d3.select(this.infoButtonSelector).on('click', this.infoButtonClicked.bind(this));
 
     this._nodes = { div, svg, linksNode, textNode, infoCardContent, infoSlot };
   }
@@ -182,9 +182,11 @@ class Taxonomy {
     return nodes;
   }
 
-  tooltipButtonClicked() {
+  infoButtonClicked() {
+    console.log('click')
     this.addListeners();
     this.nodeLeave();
+    this._nodes.div.on('click', null);
   }
 
   addListeners() {
@@ -197,6 +199,10 @@ class Taxonomy {
     this._nodes.treeNodes.on('mouseenter', null)
     .on('mouseleave', null)
     .on('click', null);
+
+    setTimeout(() => {
+      this._nodes.div.on('click', this.infoButtonClicked.bind(this));
+    }, 50);
   }
 
   nodeEnter(evt, d) {
