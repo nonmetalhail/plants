@@ -1,0 +1,29 @@
+:root {
+  --taxo-primary: #e97724;
+  --taxo-secondary: #1688db;
+  --taxo-tertiary: #e5e5e5;
+
+  --taxo-grey-1: #000;
+  --taxo-grey-2: #666;
+  --taxo-grey-3: #999;
+}
+
+.minitree {
+  font-size: 14px;
+}
+
+.biomial-name {
+  margin-block-end: 10px;
+}
+
+.common-names {
+  margin-block-start: 5px;
+  margin-block-end: 10px;
+  color: var(--taxo-grey-2);
+}
+
+.synonyms {
+  margin-block-start: 5px;
+  font-weight: normal;
+  font-style: italic;
+}

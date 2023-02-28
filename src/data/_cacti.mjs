@@ -234,9 +234,29 @@ export const cacti = [
     commonNames: ['Whortleberry cactus'],
     links: ['https://en.wikipedia.org/wiki/Myrtillocactus_geometrizans']
   }, {
+    binomialName: 'Myrtillocactus cochal',
+    confidence: 2,
+    links: [
+      'https://davesgarden.com/guides/pf/showimage/174198/',
+      'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/7812/Myrtillocactus_cochal'
+    ]
+  }, {
+    binomialName: 'Opuntia ficus-indica',
+    commonNames: ['Prickly pear'],
+    links: [
+      'https://en.wikipedia.org/wiki/Opuntia',
+      'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/11631/Opuntia_ficus-indica'
+    ]
+  }, {
     binomialName: 'Opuntia monacantha v. Maverick variegata',
     commonNames: ["Joseph's coat"],
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/19873/Opuntia_monacantha_var._variegata_cv._Maverick_variegata']
+  }, {
+    binomialName: 'Opuntia sp1'
+  }, {
+    binomialName: 'Opuntia sp2'
+  }, {
+    binomialName: 'Opuntia sp3'
   }, {
     binomialName: 'Oreocereus trollii',
     commonNames: ['Old man of the Andes']
@@ -286,6 +306,48 @@ export const cacti = [
     commonNames: ['Wooley blue spires'],
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/16452/Pilosocereus_azureus']
   }, {
+    binomialName: 'Pygmaeocereus bieblii',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/23793/Pygmaeocereus_bieblii']
+  }, {
+    binomialName: 'Rebutia heliosa',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/5204/Rebutia_heliosa']
+  }, {
+    binomialName: 'Rebutia minuscula subsp',
+    confidence: 2,
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/15391/Rebutia_minuscula']
+  }, {
+    binomialName: 'Rebutia canigueralii subsp',
+    confidence: 2,
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/5130/Rebutia_canigueralii']
+  }, {
+    binomialName: 'Schlumbergera sp',
+    commonNames: ['Christmas cactus'],
+    links: ['https://en.wikipedia.org/wiki/Schlumbergera']
+  }, {
+    binomialName: 'Selenicereus sp1',
+    commonNames: ['Dragon fruit'],
+    synonyms: ['Hylocereus sp'],
+    links: [
+      'https://en.wikipedia.org/wiki/Selenicereus',
+      'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/7429/Hylocereus_undatus'
+    ]
+  }, {
+    binomialName: 'Selenicereus sp2'
+  }, {
+    binomialName: 'Selenicereus anthonyanus',
+    commonNames: ['Fish bone cactus'],
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/10700/Selenicereus_anthonyanus']
+  }, {
+    binomialName: 'Stenocactus sp1'
+  }, {
+    binomialName: 'Stenocactus sp2'
+  }, {
+    binomialName: 'Stetsonia coryne',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/19128/Stetsonia_coryne']
+  }, {
     binomialName: 'Tephrocactus articulatus var. papyracanthus'
+  }, {
+    binomialName: 'Turbinicarpus alonsoi',
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/11705/Turbinicarpus_alonsoi']
   }
 ];

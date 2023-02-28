@@ -1,5 +1,9 @@
 export const begonias = [
   {
+    binomialName: "Begonia cv. 'Freddie",
+    confidence: 2,
+    links: ['http://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3010']
+  }, {
     binomialName: "Begonia cv. 'Tiger Kitten'",
     links: [
       'https://garden.org/plants/view/161798/Begonia-Tiger-Kitten/',
@@ -16,5 +20,7 @@ export const begonias = [
   }, {
     binomialName: 'Begonia semperflorens',
     commonNames: ['Cocktail whiskey']
+  }, {
+    binomialName: "Begonia cv 'Angel Wing"
   }
 ];

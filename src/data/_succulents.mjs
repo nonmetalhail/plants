@@ -55,6 +55,17 @@ export const succulents = [
     binomialName: 'Aloe nobilis',
     commonNames: ['Gold-Tooth Aloe']
   }, {
+    binomialName: 'Aloe sp',
+    note: 'Maybe a cross between Coral aloe and soap aloe?\n\nSimilar to soap aloe but red fringe seems unusual'
+  }, {
+    binomialName: 'Aloe hybrid Kelly Griffin'
+  }, {
+    binomialName: 'Aloe hybrid "Lizard Lips"'
+  }, {
+    binomialName: 'Aloe hybrid 3'
+  }, {
+    binomialName: 'Gasteraloe sp'
+  }, {
     binomialName: 'Gonialoe variegata',
     commonNames: ['Tiger aloe']
   }, {
@@ -84,6 +95,9 @@ export const succulents = [
     commonNames: ['Namibian wild grape'],
     links: ['https://en.wikipedia.org/wiki/Cyphostemma_juttae']
   }, {
+    binomialName: 'Delosperma sp',
+    commonNames: ['Graz ice plant']
+  }, {
     binomialName: 'Deuterocohnia brevifolia',
     links: [
       'https://en.wikipedia.org/wiki/Deuterocohnia_brevifolia',
@@ -96,13 +110,36 @@ export const succulents = [
   }, {
     binomialName: "Echeveria 'purple pearl'"
   }, {
+    binomialName: "Echeveria sp1"
+  }, {
+    binomialName: "Echeveria sp2"
+  }, {
     binomialName: 'Faucaria felina subs. tuberculosa',
     links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11320/Faucaria_felina_subs._tuberculosa']
   }, {
+    binomialName: 'Faucaria sp'
+  }, {
     binomialName: "Gasteria cv. 'little warty'"
   }, {
+    binomialName: 'Graptopetelum sp1'
+  }, {
+    binomialName: 'Graptopetelum sp2'
+  }, {
+    binomialName: 'Graptopetelum sp3'
+  }, {
+    binomialName: 'Graptopetelum sp4'
+  }, {
+    binomialName: 'Graptopetelum sp5'
+  }, {
+    binomialName: 'Graptopetelum sp6'
+  }, {
+    binomialName: 'Haworthia cymbiformis f. variegata',
+    links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aloaceae/16854/Haworthia_cymbiformis_f._variegata']
+  }, {
+    binomialName: 'Haworthia sp'
+  }, {
     binomialName: 'Haworthiopsis fasciata',
-    synonyms: ['Haworthia fasciata '],
+    synonyms: ['Haworthia fasciata'],
     commonNames: ['Zebra plant']
   }, {
     binomialName: 'Kalanchoe beharensis',
@@ -126,6 +163,8 @@ export const succulents = [
     links: ['https://en.wikipedia.org/wiki/Sedum_morganianum']
   }, {
     binomialName: 'Sedum rubrotinctum'
+  }, {
+    binomialName: 'Sedium sp'
   }, {
     binomialName: 'Senecio articulatus',
     commonNames: ['Candle Plant']

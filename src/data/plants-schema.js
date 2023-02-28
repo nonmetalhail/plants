@@ -5,6 +5,7 @@
  *  commonNames: Array(string)
  *  synonyms: Array(string) - other or obsolete names
  *  links: Array(string)
- *  alternate: Array(string) - other possible species
+ *  alternate: Array(string) - other possible species,
+ *  dead: Boolean
  * }
  */
