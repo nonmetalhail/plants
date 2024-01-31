@@ -9,7 +9,7 @@
 		"build:data:force": "npm run taxonomy:overwrite && npm run treedata",
 		"ic": "git clean -xfd && npm i",
 		"lint": "eslint \"**/*.js\" --fix",
-		"start": "python -m SimpleHTTPServer 8888",
+		"start": "python3 -m http.server 8888",
 		"taxonomy:update": ".bin/getTaxonomy",
 		"taxonomy:overwrite": ".bin/getTaxonomy -f",
 		"treedata": ".bin/buildTreeData",

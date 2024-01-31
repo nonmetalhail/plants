@@ -2,6 +2,9 @@
   --taxo-primary: #e97724;
   --taxo-secondary: #1688db;
   --taxo-tertiary: #e5e5e5;
+  
+  --taxo-focus-ring: #015fcc;
+
 
   --taxo-grey-1: #000;
   --taxo-grey-2: #666;
@@ -13,6 +16,10 @@
   stroke: var(--taxo-grey-2);
   stroke-opacity: 0.4;
   stroke-width: 1.5;
+}
+
+.nodes g:focus {
+  outline-offset: 3px;
 }
 
 .nodes rect {

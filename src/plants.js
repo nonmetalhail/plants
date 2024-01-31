@@ -36,6 +36,7 @@ class Taxonomy {
     };
 
     this._selectedElems = [];
+    this._focusedElem = null;
 
     this.init();
     this.render();
@@ -104,7 +105,8 @@ class Taxonomy {
       .attr('height', height)
       .attr('style', 'max-width: 100%; height: auto; height: intrinsic;')
       .attr('font-family', this._styles.text.family)
-      .attr('font-size', this._styles.text.size);
+      .attr('font-size', this._styles.text.size)
+      .attr('tabindex', 0);
 
     const linksNode = svg.append('g')
       .classed('links', true);
@@ -136,11 +138,17 @@ class Taxonomy {
       .data(root.descendants())
       .join('g')
         .attr('class', d => d.children ? null : 'plant')
-        .attr('transform', d => `translate(${d.y},${d.x})`);
+        .attr('transform', d => `translate(${d.y},${d.x})`)
+        .attr('tabindex', -1);
 
     this._nodes.treeNodes = treeNodes;
     this._nodes.linkPaths = linkPaths;
     this.addListeners(treeNodes);
+
+    // prime the pump for keyboard
+    const firstNode = d3.select(treeNodes.node());
+    this._focusedElem = firstNode;
+    firstNode.attr('tabindex', 0);
 
     treeNodes.append('rect')
       .attr('pointer-events', 'all')
@@ -190,19 +198,128 @@ class Taxonomy {
   }
 
   addListeners() {
-    this._nodes.treeNodes.on('mouseenter', this.nodeEnter.bind(this))
-    .on('mouseleave', this.nodeLeave.bind(this))
-    .on('click', this.removeListeners.bind(this));
+    this._nodes.treeNodes
+      .on('mouseenter focus', this.nodeEnter.bind(this))
+      .on('mouseleave blur', this.nodeLeave.bind(this))
+      .on('click', this.removeListeners.bind(this))
+      // dont want click to trigger a focus event
+      .on('mousedown', (evt) => evt.preventDefault());
+
+    this._nodes.svg
+      .on('keyup', this.processKeyEvent.bind(this))
+      .on('keydown', this.stopPageScroll.bind(this));
   }
 
   removeListeners(elem) {
-    this._nodes.treeNodes.on('mouseenter', null)
-    .on('mouseleave', null)
-    .on('click', null);
+    this._nodes.treeNodes
+      .on('mouseenter keyfocus', null)
+      .on('mouseleave keyblur', null)
+      .on('click', null)
+      .on('mousedown', null);
 
     setTimeout(() => {
       this._nodes.div.on('click', this.infoButtonClicked.bind(this));
     }, 50);
+  }
+
+  stopPageScroll(evt) {
+    switch (evt.key) {
+      case 'ArrowRight':
+      case 'ArrowLeft': 
+      case 'ArrowUp': 
+      case 'ArrowDown': 
+        evt.preventDefault();
+        break;
+    }
+  }
+
+  processKeyEvent(evt) {
+    const key = evt.key;
+    let node;
+    console.log(key);
+    switch (key) {
+      case 'ArrowRight': {
+        // go to children
+        console.log(this._focusedElem)
+        const datum = this._focusedElem.datum();
+        node = datum.children?.[0];
+        break;  
+      }
+
+      // go to parent
+      case 'ArrowLeft': {
+        const datum = this._focusedElem.datum();
+        node = datum.parent;
+      break;
+      }
+
+      // go to older sibling
+      case 'ArrowUp': {
+        const datum = this._focusedElem.datum();
+        node = this.findSiblingElem(datum, -1);
+        break;
+      }
+
+      // go to older sibling
+      case 'ArrowDown': {
+        const datum = this._focusedElem.datum();
+        node = this.findSiblingElem(datum, 1);
+        break;
+      }
+
+      case 'Escape':
+        this._focusedElem.node().blur();
+        break;
+    }
+
+    if (!node) return;
+    this.selectNodeWithKeyboard(node)
+  }
+
+  findSiblingElem(d, dir) {
+    if (!d.parent) return;
+    const parent = d.parent;
+    const siblings = parent.children;
+    const self = siblings.indexOf(d);
+    const sib = self + dir;
+
+    // if we are at an edge on this branch, recursively walk 
+    // the tree back to get the next percieved neighbor
+    if (sib === -1 || sib === siblings.length) {
+      const node = this.findSiblingElem(parent, dir);
+      if (!node) return;
+
+      const idx = dir === 1 ? 0 : node.children.length -1;
+      return node.children[idx];
+    }
+
+    return siblings[sib];
+  }
+
+  selectNodeWithKeyboard(n) {
+    this.unselectNodeWithKeyboard();
+    const elem = this.findElemFromNode(n);
+    this._focusedElem = d3.select(elem);
+    this._focusedElem.attr('tabindex', 0);
+    elem.focus();
+  }
+
+  unselectNodeWithKeyboard() {
+    if (this._focusedElem) {
+      this._focusedElem.node().blur();
+      this._focusedElem.attr('tabindex', -1);
+      this._focusedElem = null;
+    }
+  }
+
+  findElemFromNode(data) {
+    let elem;
+    this._nodes.treeNodes.each(function(d) {
+      if (d === data) {
+        elem = this;
+      }
+    });
+    return elem;
   }
 
   nodeEnter(evt, d) {
