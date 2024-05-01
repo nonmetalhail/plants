@@ -1,16 +1,3 @@
-:root {
-  --taxo-primary: #e97724;
-  --taxo-secondary: #1688db;
-  --taxo-tertiary: #e5e5e5;
-  
-  --taxo-focus-ring: #015fcc;
-
-
-  --taxo-grey-1: #000;
-  --taxo-grey-2: #666;
-  --taxo-grey-3: #999;
-}
-
 .links > path {
   fill: none;
   stroke: var(--taxo-grey-2);

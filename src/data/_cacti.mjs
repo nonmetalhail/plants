@@ -117,12 +117,10 @@ export const cacti = [
     ]
   }, {
     binomialName: 'Echinopsis spachiana',
-    confidence: 3,
     links: [
       'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/8648/Echinopsis_spachiana',
       'https://cactiguide.com/cactus/?genus=Echinopsis&species=spachiana'
-    ],
-    note: 'Need to confirm that it has a white flower. Otherwise some maybe hybrid'
+    ]
   }, {
     binomialName: 'Echinopsis terscheckii',
     synonyms: ['Trichocereus terscheckii'],
@@ -152,7 +150,8 @@ export const cacti = [
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1532/Ferocactus_glaucescens']
   }, {
     binomialName: 'Ferocactus latispinus',
-    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/4259/Ferocactus_latispinus']
+    links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/4259/Ferocactus_latispinus'],
+    dead: true
   } ,{
     binomialName: 'Ferocactus latispinus subs. spiralis',
     confidence: 2,
@@ -214,9 +213,7 @@ export const cacti = [
     ]
   }, {
     binomialName: 'Mammillaria senilis',
-    confidence: 2,
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/9677/Mammillaria_senilis'],
-    note: 'flowers should confirm identification'
   }, {
     binomialName: 'Mammillaria spinosissima',
     commonNames: ['Red headed irishman'],

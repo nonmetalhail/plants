@@ -30,36 +30,24 @@ export const succulents = [
     commonNames: ['Blue agave'],
     links: ['https://en.wikipedia.org/wiki/Blue_agave']
   }, {
-    binomialName: "Agave americana v. 'Marginata'",
+    binomialName: "Agave americana var marginata",
     links: ['https://en.wikipedia.org/wiki/Agave_americana']
   }, {
     binomialName: 'Agave parryi'
   }, {
-    binomialName: 'Aloe arborescens',
-    commonNames: ['Torch Aloe']
-  }, {
-    binomialName: 'Aloiampelos ciliaris',
-    confidence: 2
-  }, {
-    binomialName: "Aloe cv. 'California'",
-    confidence: 3
-  }, {
-    binomialName: 'Aloe marlothii',
-    commonNames: ['Mountain aloe'],
-    dead: true,
-    links: [
-      'https://en.wikipedia.org/wiki/Aloe_marlothii',
-      'https://cactusjungle.com/plants/aloe-marlothii-bergaalwyn-mountain-aloe/'
-    ]
-  }, {
-    binomialName: 'Aloe nobilis',
-    commonNames: ['Gold-Tooth Aloe']
-  }, {
-    binomialName: 'Gonialoe variegata',
-    commonNames: ['Tiger aloe']
-  }, {
     binomialName: 'Corpuscularia lehmannii',
     links: ['https://www.succulentsandsunshine.com/types-of-succulents/corpuscularia-lehmannii-ice-plant/']
+  }, {
+    binomialName: "Mangave cv. 'Praying Hands'",
+    links:[
+      'https://www.waltersgardens.com/variety.php?ID=MAGPH',
+      'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=4625'
+    ]
+  }, {
+    binomialName: "Mangave cv. 'Silver Fox'",
+    links: [
+      'https://www.waltersgardens.com/variety.php?ID=MAGSF'
+    ]
   }, {
     binomialName: 'Crassula ovata',
     commonNames: ['Jade plant'],
@@ -82,6 +70,7 @@ export const succulents = [
   }, {
     binomialName: 'Cyphostemma juttae',
     commonNames: ['Namibian wild grape'],
+    dead: true,
     links: ['https://en.wikipedia.org/wiki/Cyphostemma_juttae']
   }, {
     binomialName: 'Deuterocohnia brevifolia',
@@ -99,11 +88,19 @@ export const succulents = [
     binomialName: 'Faucaria felina subs. tuberculosa',
     links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11320/Faucaria_felina_subs._tuberculosa']
   }, {
-    binomialName: "Gasteria cv. 'little warty'"
+    binomialName: 'Fenestraria aurantiaca',
+    links: [
+      'https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11326/Fenestraria_aurantiaca'
+    ]
   }, {
-    binomialName: 'Haworthiopsis fasciata',
-    synonyms: ['Haworthia fasciata '],
-    commonNames: ['Zebra plant']
+    binomialName: "Hylotelephium cv. 'Autumn Joy'",
+    synonyms: ["Sedium 'Autumn Joy'", "Hylotelephium 'Herbstfreude'", ],
+    note: 'Hybrid of Hylotelephium telephium and Hylotelephium spectabile',
+    links: [
+      'https://en.wikipedia.org/wiki/Hylotelephium_telephium',
+      'https://www.thespruce.com/autumn-joy-sedum-2132607',
+      'https://www.finegardening.com/plant/stonecrop-sedum-autumn-joy'
+    ]
   }, {
     binomialName: 'Kalanchoe beharensis',
     links: ['https://en.wikipedia.org/wiki/Kalanchoe_beharensis']
@@ -120,6 +117,12 @@ export const succulents = [
     links:[
       'http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Portulacaceae/18165/Portulacaria_afra',
       'https://en.wikipedia.org/wiki/Portulacaria_afra'
+    ]
+  }, {
+    binomialName: 'Puya alpestris',
+    links: [
+      'https://en.wikipedia.org/wiki/Puya_alpestris',
+      'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=1328'
     ]
   }, {
     binomialName: 'Sedum morganianum',

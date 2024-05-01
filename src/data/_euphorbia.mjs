@@ -55,5 +55,11 @@ export const euphorbia = [
   }, {
     binomialName: 'Euphorbia meloformis',
     links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Euphorbiaceae/11997/Euphorbia_meloformis']
+  }, {
+    binomialName: "Euphorbia cv. 'Blackbird'",
+    links: [
+      'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3268',
+      'https://www.gardenia.net/plant/euphorbia-blackbird-spurge'
+    ]
   }
 ];

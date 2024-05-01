@@ -1,9 +1,11 @@
 export const fruits = [
   {
     binomialName: 'Rhus integrifolia',
+    native: true,
     links: ['https://en.wikipedia.org/wiki/Rhus_integrifolia']
   }, {
     binomialName: 'Prunus ilicifolia ssp. lyonii',
+    native: true,
     links: [
       'https://calscape.org/Prunus-ilicifolia-ssp.-lyonii-()',
       'http://mother-natures-backyard.blogspot.com/2018/06/plant-of-month-june-evergreen-cherry.html?m=1'

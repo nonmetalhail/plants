@@ -133,7 +133,7 @@ export const manual = {
     "speciesKey":2985682,
     "class":"Magnoliopsida"
   },
-  'Philodendron cv. birkin': {
+  "Philodendron cv. 'Birkin'": {
     "scientificName":"Philodendron Schott",
     "canonicalName":"Philodendron",
     "matchType":"MANUAL",

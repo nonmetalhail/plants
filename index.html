@@ -4,20 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PLANTS</title>
-    <link type="text/css" rel="stylesheet" href="./src/plants.css"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="./src/global-vars.css"/>
+    <style>
+      body {
+        font-family: var(--plant-font-family);
+      }
+      nav {
+        margin-bottom: 25px;
+      }
+
+      a {
+        color: var(--taxo-secondary);
+        text-decoration: unset;
+      }
+
+      a:hover, 
+      a:focus {
+        color: var(--taxo-focus-ring);
+        text-decoration: revert;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="wrapper">
-      <div id="chart-container"></div>
-      <div id="info-card">
-        <div id="info-card-content" class="hidden">
-          <div id="card-clear-wrapper"><button id="card-clear">×</button></div>
-          <div id="info-card-slot"></div>
-        </div>
-      </div>
-    </div>
+    <h1>Plants</h1>
+    <nav>
+      <a href="./tree.html">Go to tree view</a>
+    </nav>
+    <pl-plant-list></pl-plant-list>
   </body>
 
-  <script type="module" src="src/plants.js"></script>
+  <script type="module" src="src/components/pl-card.js"></script>
+  <script type="module" src="src/components/pl-plant-list.js"></script>
 </html>

@@ -14,7 +14,8 @@ export const others = [
     links: ['https://en.wikipedia.org/wiki/Impatiens_sodenii']
   }, {
     binomialName: 'Impatiens balsamina',
-    links: ['https://identify.plantnet.org/the-plant-list/species/Impatiens%20balsamina%20L./data']
+    links: ['https://identify.plantnet.org/the-plant-list/species/Impatiens%20balsamina%20L./data'],
+    dead: true
   }, {
     binomialName: 'Brugmansia sanguinea',
     links: [
@@ -43,7 +44,7 @@ export const others = [
     binomialName: 'Peperomia cv. rosso',
     hybrid: ['Peperomia metallica', 'Peperomia  marmorata']
   }, {
-    binomialName: 'Philodendron cv. birkin'
+    binomialName: "Philodendron cv. 'Birkin'"
   }, {
     binomialName: "Picea pungens 'Baby Blue Eyes'"
   }, {
@@ -86,5 +87,17 @@ export const others = [
     binomialName: 'Dracaena marginata'
   }, {
     binomialName: 'Calathea roseopicta'
+  }, {
+    binomialName: 'Saxifraga stolonifera',
+    links: [
+      'https://en.wikipedia.org/wiki/Saxifraga_stolonifera',
+      'https://www.gardenia.net/plant/saxifraga-stolonifera'
+    ]
+  }, {
+    binomialName: "Salvia cv. 'Amistad'",
+    links: [
+      'https://www.anniesannuals.com/salvia-amistad.html'
+    ]
   }
+
 ];

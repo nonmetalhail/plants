@@ -12,8 +12,5 @@ export const oaks = [
     links: ['https://selectree.calpoly.edu/tree-detail/Quercus-chrysolepis']
   }, {
     binomialName: 'Quercus agrifolia'
-  }, {
-    binomialName: 'Rhus integrifolia',
-    links: ['https://en.wikipedia.org/wiki/Rhus_integrifolia']
   }
 ];
