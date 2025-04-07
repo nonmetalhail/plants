@@ -122,13 +122,6 @@ export const aloes = [
   }, {
     binomialName: 'Dymondia margaretae'
   }, {
-    binomialName: 'Gonialoe variegata',
-    synonyms: ['Aloe variegata'],
-    commonNames: ['Tiger aloe'],
-    links: [
-      'https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aloaceae/688/Aloe_variegata'
-    ]
-  }, {
     binomialName: 'Gasteria acinacifolia',
     links: [
       'https://www.ruthbancroftgarden.org/plants/gasteria-acinacifolia/',
@@ -147,7 +140,11 @@ export const aloes = [
     binomialName: 'Gasteria sp.'
   }, {
     binomialName: 'Gonialoe variegata',
-    commonNames: ['Tiger aloe']
+    synonyms: ['Aloe variegata'],
+    commonNames: ['Tiger aloe'],
+    links: [
+      'https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aloaceae/688/Aloe_variegata'
+    ]
   }, {
     binomialName: 'Haworthiopsis fasciata',
     synonyms: ['Haworthia fasciata '],
