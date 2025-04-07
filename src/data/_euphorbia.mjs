@@ -9,7 +9,7 @@ export const euphorbia = [
     hybridOf: ['Euphorbia amygdaloides', 'Euphorbia martinii'],
     links: ['https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3268']
   }, {
-    binomialName: 'Euphrobia clandestina',
+    binomialName: 'Euphorbia clandestina',
     commonNames: ['Ostrich neck']
   }, {
     binomialName:'Euphorbia enopla',

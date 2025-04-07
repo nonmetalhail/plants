@@ -1,6 +1,6 @@
 export const aloes = [
   {
-    binomialName: "Aloe aculeata cv. 'Black Spine'",
+    binomialName: "Aloe aculeata cv. 'Black Spines'",
     links: [
       'https://en.wikipedia.org/wiki/Aloe_aculeata',
       'https://www.aloesinwonderland.com/plant-gallery/aloe-aculeata',
@@ -29,7 +29,7 @@ export const aloes = [
     binomialName: "Aloe cv. 'California'",
     confidence: 3
   }, {
-    binomialName: "Aloe deltoideodonta var fallax",
+    binomialName: "Aloe deltoideodonta var. fallax",
     commonNames: ['Deltoid Aloe'],
     links: [
       'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3216',

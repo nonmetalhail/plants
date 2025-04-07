@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 function pause() {
   return new Promise((resolve) => {
@@ -40,16 +44,25 @@ function pause() {
     try {
       console.log(`Getting ${plant.binomialName}`);
       const response = await axios.get(encodeURI(`${URL}${plant.binomialName}`));
+
       if (response.data.matchType !== "EXACT") {
         console.log(`--> ${plant.binomialName} wasnt found`);
-        failures += '***************************************\n';
-        failures += `${plant.binomialName}\n`;
-        failures += `${JSON.stringify(response.data)}\n`;
+
+        if (response.data.matchType !== "NONE" && response.data.confidence >= 90) {
+          console.log(`--> ${response.data.canonicalName} found with ${response.data.confidence} confidence`);
+
+        } else {
+          failures += '***************************************\n';
+          failures += `${plant.binomialName}\n`;
+          failures += `${JSON.stringify(response.data)}\n`;
+
+          if (args.indexOf('-a') === -1) {
+            continue;
+          }
+        }
       }
 
-      if (response.data.matchType === "EXACT" || args.indexOf('-a') > -1) {
-        taxo[plant.binomialName] = response.data;
-      }
+      taxo[plant.binomialName] = response.data;
 
     } catch (error) {
       console.error(error);

@@ -15,7 +15,7 @@
 		"taxonomy:overwrite": ".bin/getTaxonomy -f",
 		"treedata": ".bin/buildTreeData",
 		"image:dir": ".bin/createImageDir",
-		"image:process": ".bin/processImages",
+		"image:process": "NODE_OPTIONS='--no-experimental-fetch' .bin/processImages" ,
 		"image:process:force": ".bin/processImages -f",
 		"image:data": ".bin/createImageData",
 		"image:build": "npm run image:process && npm run image:data"
