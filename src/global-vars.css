@@ -1,0 +1,15 @@
+:root {
+  --taxo-primary: #e97724;
+  --taxo-primary-rgb: 233,119,36;
+  --taxo-secondary: #1688db;
+  --taxo-tertiary: #e5e5e5;
+  
+  --taxo-focus-ring: #015fcc;
+
+  --taxo-grey-1: #000;
+  --taxo-grey-2: #666;
+  --taxo-grey-3: #999;
+
+  --plant-font-family:  "Sedan";
+
+}

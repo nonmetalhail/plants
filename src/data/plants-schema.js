@@ -6,5 +6,10 @@
  *  synonyms: Array(string) - other or obsolete names
  *  links: Array(string)
  *  alternate: Array(string) - other possible species
+ *  hybridOf: Array(string) - list of parents
+ *  note: string,
+ *  native: boolean,
+ *  dead: true
+ *  mlk: boolean
  * }
  */

@@ -1,49 +1,65 @@
 export const others = [
   {
-    binomialName: 'Ledebouria socialis',
+    binomialName: 'Althanasia acerosa',
+    commonNames: ['Coulter bush']
+  }, {
+    binomialName: 'Althanasia pinnata',
+  }, {
+    binomialName: 'Cussonia paniculata',
+    commonNames: ['Mountain Cabbage Tree'],
     links: [
-      'https://en.wikipedia.org/wiki/Ledebouria_socialis',
-      'http://www.cactus-art.biz/schede/LEDEBOURIA/Ledebouria_socialis/Ledebouria_socialis/Ledebouria_socialis.htm'
+      'https://www.llifle.com/Encyclopedia/TREES/Family/Araliaceae/23516/Cussonia_paniculata',
+      'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=482',
+      'https://en.wikipedia.org/wiki/Cussonia_paniculata'
     ]
   }, {
     binomialName: 'Goeppertia lancifolia',
     synonyms: ['Calathea lancifolia'],
+    dead: true,
     links: ['https://en.wikipedia.org/wiki/Calathea_lancifolia']
+  }, {
+    binomialName: 'Helichrysum argyrophyllum',
+    commonNames: ['Golden Guinea Everlasting']
   }, {
     binomialName: 'Impatiens sodenii',
     links: ['https://en.wikipedia.org/wiki/Impatiens_sodenii']
   }, {
     binomialName: 'Impatiens balsamina',
-    links: ['https://identify.plantnet.org/the-plant-list/species/Impatiens%20balsamina%20L./data']
+    links: ['https://identify.plantnet.org/the-plant-list/species/Impatiens%20balsamina%20L./data'],
+    dead: true
+  }, {
+    binomialName: 'Penstemon eatonii',
+    commonNames: ['Firecracker Penstemon']
   }, {
     binomialName: 'Brugmansia sanguinea',
+    mlk: true,
     links: [
       'https://en.wikipedia.org/wiki/Brugmansia_sanguinea',
       'https://www.finegardening.com/article/angels-trumpets-big-blooms-with-unbeatable-fragrance'
     ]
   }, {
     binomialName: 'Pittosporum undulatum',
+    mlk: true,
     links: [
       'https://en.wikipedia.org/wiki/Pittosporum_undulatum',
       'https://keyserver.lucidcentral.org/weeds/data/media/Html/pittosporum_undulatum.htm'
     ]
   }, {
     binomialName: 'Arbutus unedo',
+    mlk: true,
     links: [
       'https://selectree.calpoly.edu/tree-detail/arbutus-unedo',
       'https://en.wikipedia.org/wiki/Arbutus_unedo'
     ]
   }, {
-    binomialName: "Arctostaphylos manzanita f. 'Dr. Hurd'",
-    links: ['https://www.calfloranursery.com/plants/arctostaphylos-manzanita-dr-hurd']
-  }, {
     binomialName: 'Pachira aquatica',
     commonNames: ['Money Tree']
   }, {
     binomialName: 'Peperomia cv. rosso',
-    hybrid: ['Peperomia metallica', 'Peperomia  marmorata']
+    hybrid: ['Peperomia metallica', 'Peperomia  marmorata'],
+    dead: true
   }, {
-    binomialName: 'Philodendron cv. birkin'
+    binomialName: "Philodendron cv. 'Birkin'"
   }, {
     binomialName: "Picea pungens 'Baby Blue Eyes'"
   }, {
@@ -57,7 +73,8 @@ export const others = [
   links: ['https://en.wikipedia.org/wiki/Strobilanthes_penstemonoides']
   }, {
     binomialName: 'Asarum splendens',
-    commonNames: ['Chinese wild ginger']
+    commonNames: ['Chinese wild ginger'],
+    mlk: true
   }, {
     binomialName: 'Syagrus romanzoffiana',
     commonNames: ['Queen Palm'],
@@ -85,6 +102,20 @@ export const others = [
   }, {
     binomialName: 'Dracaena marginata'
   }, {
-    binomialName: 'Calathea roseopicta'
+    binomialName: 'Saxifraga stolonifera',
+    links: [
+      'https://en.wikipedia.org/wiki/Saxifraga_stolonifera',
+      'https://www.gardenia.net/plant/saxifraga-stolonifera'
+    ]
+  }, {
+    binomialName: "Salvia cv. 'Amistad'",
+    hybridOf: ['Salvia guaranitica', 'Salvia gesneriiflora'],
+    links: [
+      'https://www.anniesannuals.com/salvia-amistad.html',
+      'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3927'
+    ]
+  }, {
+    binomialName: "Lomandra longifolia cv. 'Platinum Beauty'",
+    links:['https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=4164']
   }
 ];
