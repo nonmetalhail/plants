@@ -7,6 +7,10 @@ export const cacti = [
       'https://cactusjungle.com/plants/austrocylindropuntia-subulata/'
     ]
   }, {
+    binomialName: 'Carnegiea gigantea',
+    commonNames: ['Saguaro', 'Monument of the desert'],
+    links: ['https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/6374/Carnegiea_gigantea']
+  }, {
     binomialName: 'Cephalocereus senilis',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/6893/Cephalocereus_senilis']
   }, {
@@ -45,6 +49,10 @@ export const cacti = [
     binomialName: 'Cereus spegazzinii f. cristatus',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/15183/Cereus_spegazzinii_f._cristatus']
   }, {
+    binomialName: 'Cleistocactus hyalacanthus',
+    synonyms: ['Cleistocactus jujuyensis'],
+    links: ['https://llifle.info/Encyclopedia/CACTI/Family/Cactaceae/9603/Cleistocactus_hyalacanthus']
+  }, {
     binomialName: 'Cleistocactus strausii',
     commonNames: ['Silver torch'],
     synonyms: ['Borzicactus strausii'],
@@ -53,6 +61,7 @@ export const cacti = [
     binomialName: 'Cleistocactus winteri',
     commonNames: ['Golden Rat Tail'],
     synonyms: ['Borzicactus winteri'],
+    deat: true,
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/3784/Cleistocactus_winteri']
   }, {
     binomialName: 'Cylindropuntia sp.1',
@@ -62,7 +71,8 @@ export const cacti = [
     commonNames: ['Cholla']
   }, {
     binomialName: 'Disocactus speciosus',
-    confidence: 3
+    confidence: 3,
+    dead: true
   }, {
     binomialName: 'Disocactus × mallisonii',
     links: ['https://worldofsucculents.com/disocactus-mallisonii-rats-tail-cactus/'],
@@ -76,6 +86,7 @@ export const cacti = [
     ]
   }, {
     binomialName: 'Echinocactus polycephalus',
+    dead: true,
     links:[
       'http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/940/Echinocactus_polycephalus',
       'https://www.birdandhike.com/Veg/Species/Cactus/Echino_pol/_Ech_pol.htm'
@@ -83,19 +94,27 @@ export const cacti = [
   }, {
     binomialName: 'Echinocereus engelmannii',
     commonNames: ["Engelmann's Hedgehog"],
+    dead: true,
     links: ['https://www.birdandhike.com/Veg/Species/Cactus/Echino_eng/_Ech_eng.htm']
   }, {
     binomialName: 'Echinocereus pulchellus subs. weinbergii',
+    dead: true,
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/12900/Echinocereus_pulchellus_subs._weinbergii']
   }, {
-    binomialName: 'Echinocereus reichenbachii f. albispinus'
+    binomialName: 'Echinocereus reichenbachii f. albispinus',
+    dead: true
   }, {
     binomialName: 'Echinocereus rigidissimus subs. rubispinus',
+    dead: true,
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/10573/Echinocereus_rigidissimus_subs._rubispinus']
   }, {
     binomialName: 'Echinopsis candicans f. cristata',
     confidence: 2,
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/18454/Echinopsis_candicans_f._cristata']
+  }, {
+    binomialName: 'Echinopsis huascha',
+    confidence: 3,
+    links: ['https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1026/Echinopsis_huascha']
   }, {
     binomialName: 'Echinopsis lageniformis f. Monstruosa',
     synonyms: ['Trichocereus bridgesii f. monstruosus'],
@@ -108,6 +127,9 @@ export const cacti = [
       'https://www.gardenia.net/plant/trichocereus-pachanoi',
       'https://en.wikipedia.org/wiki/Echinopsis_pachanoi'
     ]
+  }, {
+    binomialName: 'Echinopsis rhodotricha var. argentinensis',
+    links: ['https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/21027/Echinopsis_rhodotricha_var._argentinensis']
   }, {
     binomialName: 'Echinopsis schickendantzii',
     confidence: 2,
@@ -122,11 +144,17 @@ export const cacti = [
       'https://cactiguide.com/cactus/?genus=Echinopsis&species=spachiana'
     ]
   }, {
+    binomialName: 'Echinopsis tarmaensis',
+    confidence: 3
+  }, {
     binomialName: 'Echinopsis terscheckii',
     synonyms: ['Trichocereus terscheckii'],
+    commonNames: ['Argentine saguaro', 'Cardon grande cactus'],
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/8744/Echinopsis_terscheckii']
   }, {
-    binomialName: 'Echinopsis x ?',
+    binomialName: 'Echinopsis x sp1',
+  }, {
+    binomialName: 'Echinopsis x sp2',
   }, {
     binomialName: 'Epiphyllum sp.1',
   }, {
@@ -148,6 +176,8 @@ export const cacti = [
   }, {
     binomialName: 'Ferocactus glaucescens',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1532/Ferocactus_glaucescens']
+  }, {
+    binomialName: 'Ferocactus hamatacanthus'
   }, {
     binomialName: 'Ferocactus latispinus',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/4259/Ferocactus_latispinus'],
@@ -178,6 +208,12 @@ export const cacti = [
     binomialName: 'Ferocactus sp.',
     note: 'From seeds from Terry'
   }, {
+    binomialName: 'Gymnocalycium friedrichii',
+    links: ['https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/11932/Gymnocalycium_friedrichii']
+  }, {
+    binomialName: 'Hildewinteria Aureispina',
+    confidence: 2
+  }, {
     binomialName: 'Leuchtenbergia principis',
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/12924/Leuchtenbergia_principis']
   }, {
@@ -190,6 +226,9 @@ export const cacti = [
     alternate: ['M. yucatanensis'],
     links: ['https://identify.plantnet.org/the-plant-list/species/Mammillaria%20backebergiana%20F.G.%20Buchenau/data']
   }, {
+    binomialName: 'Mammillaria carnea',
+    confidence: 2
+  }, {
     binomialName: 'Mammillaria decipiens',
     confidence: 2
   }, {
@@ -200,6 +239,8 @@ export const cacti = [
     synonyms: ['M. celsiana'],
     confidence: 2,
     links: ['https://thebelmontrooster.com/families-of-familiar-plants/cactaceae-family/mammillaria-species/mammillaria-muehlenpfordtii-syn-m-celsiana-golden-pincushion/']
+  }, {
+    binomialName: 'Mammillaria plumosa',
   }, {
     binomialName: 'Mammillaria polythele subs. obconella',
     confidence: 3
@@ -267,7 +308,7 @@ export const cacti = [
     ]
   }, {
     binomialName: 'Parodia magnifica',
-    confidence: 2,
+    dead: true,
     links: ['http://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/20453/Parodia_magnifica']
   }, {
     binomialName: 'Pilosocereus pachycladus',

@@ -15,25 +15,13 @@ export const succulents = [
     binomialName: 'Aeonium arboreum var. atropurpureum',
     links: ['https://botanicgardens.uw.edu/about/blog/2014/08/04/august-2014-plant-profile-aeonium-arboreum-var-atropurpureum/']
   }, {
-    binomialName: 'Agave attenuata',
-    commonNames: ['Foxtail Agave'],
-    links: ['https://en.wikipedia.org/wiki/Agave_attenuata']
-  }, {
-    binomialName: "Agave cv. 'Blue Glow'",
-    hybrid: ['Agave ocahui', 'Agave attenuata'],
-  }, {
-    binomialName: 'Agave filifera',
-    commonNames: ['Thread-leaf agave'],
-    confidence: 2
-  }, {
-    binomialName: 'Agave tequilana',
-    commonNames: ['Blue agave'],
-    links: ['https://en.wikipedia.org/wiki/Blue_agave']
-  }, {
-    binomialName: "Agave americana var marginata",
-    links: ['https://en.wikipedia.org/wiki/Agave_americana']
-  }, {
-    binomialName: 'Agave parryi'
+    binomialName: 'Beaucarnea recurvata',
+    synonyms: ['Nolina recurvata'],
+    commonNames: 'Ponytail Palm',
+    links: [
+      'https://en.wikipedia.org/wiki/Beaucarnea_recurvata',
+      'https://llifle.com/Encyclopedia/TREES/Family/Dracaenaceae/20519/Nolina_recurvata'
+    ]
   }, {
     binomialName: 'Corpuscularia lehmannii',
     links: ['https://www.succulentsandsunshine.com/types-of-succulents/corpuscularia-lehmannii-ice-plant/']
@@ -57,6 +45,10 @@ export const succulents = [
     commonNames: ['Gollum jade', 'Ogre ear'],
     links: ['https://en.wikipedia.org/wiki/Crassula_ovata']
   }, {
+    binomialName: 'Crassula perfoliata var. minor',
+    synonyms: ['Crassula perfoliata var. falcata'],
+    links: ['https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/11183/Crassula_perfoliata_var._falcata']
+  }, {
     binomialName: 'Crassula tetragona'
   }, {
     binomialName: 'Curio repens',
@@ -79,11 +71,23 @@ export const succulents = [
       'https://worldofsucculents.com/deuterocohnia-brevifolia/'
     ]
   }, {
+    binomialName: 'Dyckia sp'
+  }, {
     binomialName: 'Echeveria agavoides',
     commonNames: ['Lipstick echeveria'],
     links: ['https://www.succulentsandsunshine.com/types-of-succulents/echeveria-agavoides-lipstick-echeveria/']
   }, {
+    binomialName: "Echeveria 'Afterglow'",
+    hybridOf: ['Echeveria cante', 'Echeveria shaviana'],
+    links: ['https://www.smgrowers.com/products/plants/plantdisplay.asp?strLetter=E&plant_id=2920']
+  }, {
     binomialName: "Echeveria 'purple pearl'"
+  }, {
+    binomialName: 'Fascicularia pitcairniifolia',
+    links: [
+      'https://www.llifle.com/Encyclopedia/BROMELIADS/Family/Bromeliaceae/34403/Fascicularia_pitcairniifolia',
+      'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=627',
+    ]
   }, {
     binomialName: 'Faucaria felina subs. tuberculosa',
     links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11320/Faucaria_felina_subs._tuberculosa']
@@ -92,6 +96,9 @@ export const succulents = [
     links: [
       'https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11326/Fenestraria_aurantiaca'
     ]
+  }, {
+    binomialName: 'Fenestraria rhopalophylla subs. aurantiaca',
+    links: ['https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11324/Fenestraria_rhopalophylla_subs._aurantiaca']
   }, {
     binomialName: "Hylotelephium cv. 'Autumn Joy'",
     synonyms: ["Sedium 'Autumn Joy'", "Hylotelephium 'Herbstfreude'", ],
@@ -111,6 +118,12 @@ export const succulents = [
     binomialName: 'Kalanchoe fedtschenkoi',
     links: ['https://www.crassulaceae.ch/de/artikel?akID=68&aaID=2&aiID=F&aID=270']
   }, {
+    binomialName: 'Ledebouria socialis',
+    links: [
+      'https://en.wikipedia.org/wiki/Ledebouria_socialis',
+      'http://www.cactus-art.biz/schede/LEDEBOURIA/Ledebouria_socialis/Ledebouria_socialis/Ledebouria_socialis.htm'
+    ]
+  }, {
     binomialName: 'Oscularia deltoides'
   }, {
     binomialName: 'Portulacaria afra',
@@ -120,6 +133,7 @@ export const succulents = [
     ]
   }, {
     binomialName: 'Puya alpestris',
+    dead: true,
     links: [
       'https://en.wikipedia.org/wiki/Puya_alpestris',
       'https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=1328'
@@ -130,10 +144,21 @@ export const succulents = [
   }, {
     binomialName: 'Sedum rubrotinctum'
   }, {
+    binomialName: "Sedum spectabile 'Autumn Joy'",
+    links: ['https://www.monrovia.com/autumn-joy-sedum.html?srsltid=AfmBOopzucd3heTz365YeMpe2JNF5UnZuqG_urzuy3iIAPerD9PSRM8o']
+  }, {
     binomialName: 'Senecio articulatus',
     commonNames: ['Candle Plant']
   }, {
+    binomialName: 'Senecio oxyriifolius',
+    commonNames: ['False Nasturtium']
+  }, {
     binomialName: 'Trichodiadema densum',
     links: ['http://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/14774/Trichodiadema_densum']
-  }
+  }, {
+    binomialName: "Yucca rostrata 'Saphire Skies'"
+  }, {
+    binomialName: 'Yucca rostrata x Dasylirion longissimum',
+    hybrid: ['Yucca rostrata', 'Dasylirion longissimum']
+  },
 ];

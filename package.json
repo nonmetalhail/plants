@@ -34,10 +34,9 @@
 		"@babel/preset-env": "^7.16.5",
 		"@squoosh/lib": "^0.4.0",
 		"@web/dev-server": "^0.4.4",
-		"axios": "^0.24.0",
+		"axios": "^1.8.4",
 		"babel-eslint": "^10.1.0",
 		"d3": "^7.2.1",
-		"eslint": "^6.0.0",
 		"rollup": "^2.62.0",
 		"rollup-plugin-ascii": "^0.0.3",
 		"rollup-plugin-node-resolve": "^5.2.0"

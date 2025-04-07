@@ -1,16 +1,5 @@
 export const fruits = [
   {
-    binomialName: 'Rhus integrifolia',
-    native: true,
-    links: ['https://en.wikipedia.org/wiki/Rhus_integrifolia']
-  }, {
-    binomialName: 'Prunus ilicifolia ssp. lyonii',
-    native: true,
-    links: [
-      'https://calscape.org/Prunus-ilicifolia-ssp.-lyonii-()',
-      'http://mother-natures-backyard.blogspot.com/2018/06/plant-of-month-june-evergreen-cherry.html?m=1'
-    ]
-  }, {
     binomialName: 'Malus domestica cv. Braeburn',
     commonNames: ['Braeburn apple']
   }, {
@@ -40,5 +29,4 @@ export const fruits = [
     commonNames: ['Passion flower'],
     links: ['https://davesgarden.com/guides/pf/go/54128/#b']
   }
-
 ];
