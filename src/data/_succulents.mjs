@@ -17,7 +17,7 @@ export const succulents = [
   }, {
     binomialName: 'Beaucarnea recurvata',
     synonyms: ['Nolina recurvata'],
-    commonNames: 'Ponytail Palm',
+    commonNames: ['Ponytail Palm'],
     links: [
       'https://en.wikipedia.org/wiki/Beaucarnea_recurvata',
       'https://llifle.com/Encyclopedia/TREES/Family/Dracaenaceae/20519/Nolina_recurvata'

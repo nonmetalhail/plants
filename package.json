@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "A visualization of plants",
 	"main": "index.js",
-	"type":"module",
+	"type": "module",
 	"scripts": {
 		"build:d3": "rollup -c rollup.config.js",
 		"build:data": "npm run taxonomy:update && npm run treedata",
@@ -15,7 +15,7 @@
 		"taxonomy:overwrite": ".bin/getTaxonomy -f",
 		"treedata": ".bin/buildTreeData",
 		"image:dir": ".bin/createImageDir",
-		"image:process": "NODE_OPTIONS='--no-experimental-fetch' .bin/processImages" ,
+		"image:process": "NODE_OPTIONS='--no-experimental-fetch' .bin/processImages",
 		"image:process:force": ".bin/processImages -f",
 		"image:data": ".bin/createImageData",
 		"image:build": "npm run image:process && npm run image:data"
@@ -32,13 +32,13 @@
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.16.5",
 		"@babel/preset-env": "^7.16.5",
+		"@rollup/plugin-json": "^6.1.0",
 		"@squoosh/lib": "^0.4.0",
 		"@web/dev-server": "^0.4.4",
 		"axios": "^1.8.4",
 		"babel-eslint": "^10.1.0",
 		"d3": "^7.2.1",
-		"rollup": "^2.62.0",
-		"rollup-plugin-ascii": "^0.0.3",
+		"rollup": "^4.0.0",
 		"rollup-plugin-node-resolve": "^5.2.0"
 	},
 	"dependencies": {
